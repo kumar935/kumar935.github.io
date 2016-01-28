@@ -1,18 +1,26 @@
 module.exports = function(grunt) {
-  require("load-grunt-tasks")(grunt);
+
   grunt.initConfig({
-    babel: {
-      options: {
-        sourceMap: true,
-        presets: ['es2015']
-      },
+    browserify: {
       dist: {
+        options: {
+          transform: [["babelify", { "stage": 0 }]]
+        },
         files: {
-          'dist/app.js': 'src/app.js'
+          "build/bundle.js": "src/app.js"
         }
+      }
+    },
+    watch: {
+      scripts: {
+        files: "src/*.js",
+        tasks: ["browserify"]
       }
     }
   });
 
-  grunt.registerTask('default', ['babel']);
+  grunt.loadNpmTasks("grunt-browserify");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+
+  grunt.registerTask('default', ['browserify']);
 };

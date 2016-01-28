@@ -18,8 +18,14 @@
   "homepage": "https://github.com/kumar935/kumar935.github.io#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
+    "babelify": "6.1.0",
     "grunt": "^0.4.5",
     "grunt-babel": "^6.0.0",
+    "grunt-browserify": "3.6.0",
+    "grunt-contrib-watch": "^0.6.1",
     "load-grunt-tasks": "^3.4.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0"
   }
 }

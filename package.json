@@ -1,0 +1,25 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "My personal batcave",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumar935/kumar935.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumar935/kumar935.github.io/issues"
+  },
+  "homepage": "https://github.com/kumar935/kumar935.github.io#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
+    "load-grunt-tasks": "^3.4.0"
+  }
+}

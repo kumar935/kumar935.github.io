@@ -14309,20 +14309,134 @@ return jQuery;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":4}],194:[function(require,module,exports){
-"use strict";
+'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-require("babelify/polyfill");
+require('babelify/polyfill');
 
 var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-console.log("hello world");
+var _router = require('./router');
 
-(0, _jquery2["default"])(function () {
-  (0, _jquery2["default"])("body").append("<h5>Helloo world.</h5>");
+// configuration
+_router.Router.config({ mode: 'history' });
+
+// saving the requested Url by user;
+var reqPath = window.location.pathname;
+
+// returning the user to the initial state
+_router.Router.navigate();
+
+// adding routes
+_router.Router.add(/about/, function () {
+  console.log('about');
+}).add(/products\/(.*)\/edit\/(.*)/, function () {
+  console.log('products', arguments);
+}).add(function () {
+  console.log('default');
+}).listen();
+
+console.log("*****", _router.Router.routes);
+// forwarding
+_router.Router.navigate(reqPath);
+
+_jquery2['default'](function () {
+  _jquery2['default']('#url').on("keyup", function (e, target, value) {
+    if (e.which === 13) {
+      _router.Router.navigate(_jquery2['default']("#url").val());
+    }
+  });
 });
 
-},{"babelify/polyfill":3,"jquery":192}]},{},[194]);
+},{"./router":195,"babelify/polyfill":3,"jquery":192}],195:[function(require,module,exports){
+'use strict';
+
+exports.__esModule = true;
+var Router = {
+  routes: [],
+  mode: null,
+  root: '/',
+  config: function config(options) {
+    this.mode = options && options.mode && options.mode == 'history' && !!history.pushState ? 'history' : 'hash';
+    this.root = options && options.root ? '/' + this.clearSlashes(options.root) + '/' : '/';
+    return this;
+  },
+  getFragment: function getFragment() {
+    var fragment = '';
+    if (this.mode === 'history') {
+      fragment = this.clearSlashes(decodeURI(location.pathname + location.search));
+      fragment = fragment.replace(/\?(.*)$/, '');
+      fragment = this.root != '/' ? fragment.replace(this.root, '') : fragment;
+    } else {
+      var match = window.location.href.match(/#(.*)$/);
+      fragment = match ? match[1] : '';
+    }
+    return this.clearSlashes(fragment);
+  },
+  clearSlashes: function clearSlashes(path) {
+    return path.toString().replace(/\/$/, '').replace(/^\//, '');
+  },
+  add: function add(re, handler) {
+    if (typeof re == 'function') {
+      handler = re;
+      re = '';
+    }
+    this.routes.push({ re: re, handler: handler });
+    return this;
+  },
+  remove: function remove(param) {
+    for (var i = 0, r; i < this.routes.length, r = this.routes[i]; i++) {
+      if (r.handler === param || r.re.toString() === param.toString()) {
+        this.routes.splice(i, 1);
+        return this;
+      }
+    }
+    return this;
+  },
+  flush: function flush() {
+    this.routes = [];
+    this.mode = null;
+    this.root = '/';
+    return this;
+  },
+  check: function check(f) {
+    var fragment = f || this.getFragment();
+    for (var i = 0; i < this.routes.length; i++) {
+      var match = fragment.match(this.routes[i].re);
+      if (match) {
+        match.shift();
+        this.routes[i].handler.apply({}, match);
+        return this;
+      }
+    }
+    return this;
+  },
+  listen: function listen() {
+    var self = this;
+    var current = self.getFragment();
+    var fn = function fn() {
+      if (current !== self.getFragment()) {
+        current = self.getFragment();
+        self.check(current);
+      }
+    };
+    clearInterval(this.interval);
+    this.interval = setInterval(fn, 50);
+    return this;
+  },
+  navigate: function navigate(path) {
+    path = path ? path : '';
+    if (this.mode === 'history') {
+      history.pushState(null, null, this.root + this.clearSlashes(path));
+    } else {
+      window.location.href = window.location.href.replace(/#(.*)$/, '') + '#' + path;
+    }
+    return this;
+  }
+};
+exports.Router = Router;
+
+},{}]},{},[194]);

@@ -9,7 +9,8 @@ Router.config({ mode: 'history'});
 var reqPath = window.location.pathname;
 
 // returning the user to the initial state
-Router.navigate();
+// So
+Router.navigate("0");
 
 // adding routes
 Router
@@ -24,8 +25,7 @@ Router
   })
   .listen();
 
-console.log("*****", Router.routes);
-// forwarding
+// So when user hits a url directly from the url Box, this line will navigate the page to there.
 Router.navigate(reqPath);
 
 $(

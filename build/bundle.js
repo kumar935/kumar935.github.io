@@ -14328,7 +14328,8 @@ _router.Router.config({ mode: 'history' });
 var reqPath = window.location.pathname;
 
 // returning the user to the initial state
-_router.Router.navigate();
+// So
+_router.Router.navigate("0");
 
 // adding routes
 _router.Router.add(/about/, function () {
@@ -14339,8 +14340,7 @@ _router.Router.add(/about/, function () {
   console.log('default');
 }).listen();
 
-console.log("*****", _router.Router.routes);
-// forwarding
+// So when user hits a url directly from the url Box, this line will navigate the page to there.
 _router.Router.navigate(reqPath);
 
 _jquery2['default'](function () {

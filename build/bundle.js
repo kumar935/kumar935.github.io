@@ -14321,9 +14321,9 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 var _router = require('./router');
 
-var _homeHome = require('./home/home');
+var _modulesHomeHome = require('./modules/home/home');
 
-var _wallsWalls = require('./walls/walls');
+var _modulesWallsWalls = require('./modules/walls/walls');
 
 // configuration
 _router.Router.config({ mode: 'history' });
@@ -14331,17 +14331,19 @@ _router.Router.config({ mode: 'history' });
 // saving the requested Url by user;
 var reqPath = window.location.pathname;
 
-// returning the user to the initial state
-// So
+/*
+ * The function call corresponding to a route gets triggered when the url CHANGES.
+ * So for the first time the Router.navigate() to work, I randomly assigned Router.navigate("0");
+ */
 _router.Router.navigate("0");
 
 // adding routes
-_router.Router.add(/walls/, _wallsWalls.walls).add(_homeHome.home).listen();
+_router.Router.add(/walls/, _modulesWallsWalls.walls).add(_modulesHomeHome.home).listen();
 
 // So when user hits a url directly from the url Box, this line will navigate the page to there.
 _router.Router.navigate(reqPath);
 
-},{"./home/home":195,"./router":196,"./walls/walls":197,"babelify/polyfill":3,"jquery":192}],195:[function(require,module,exports){
+},{"./modules/home/home":195,"./modules/walls/walls":196,"./router":197,"babelify/polyfill":3,"jquery":192}],195:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -14356,11 +14358,30 @@ function home() {
 
   var _jquery2 = _interopRequireDefault(_jquery);
 
-  _jquery2["default"]("body").html("home");
+  _jquery2["default"]("body .content").html("home");
   console.log("home");
 }
 
 },{"jquery":192}],196:[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+exports.walls = walls;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function walls() {
+  "use strict";
+
+  var _jquery = require("jquery");
+
+  var _jquery2 = _interopRequireDefault(_jquery);
+
+  _jquery2["default"]("body .content").html("walls");
+  console.log("walls");
+}
+
+},{"jquery":192}],197:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -14448,23 +14469,4 @@ var Router = {
 };
 exports.Router = Router;
 
-},{}],197:[function(require,module,exports){
-"use strict";
-
-exports.__esModule = true;
-exports.walls = walls;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function walls() {
-  "use strict";
-
-  var _jquery = require("jquery");
-
-  var _jquery2 = _interopRequireDefault(_jquery);
-
-  _jquery2["default"]("body").html("walls");
-  console.log("walls");
-}
-
-},{"jquery":192}]},{},[194]);
+},{}]},{},[194]);

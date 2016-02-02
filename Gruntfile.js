@@ -2,6 +2,9 @@ module.exports = function(grunt) {
 
   var serveStatic = require('serve-static');
   var serveIndex = require('serve-index');
+  var compression = require('compression');
+
+  require('load-grunt-tasks')(grunt);
   grunt.initConfig({
     browserify: {
       dist: {
@@ -13,12 +16,59 @@ module.exports = function(grunt) {
         }
       }
     },
-    watch: {
-      scripts: {
-        files: ["src/*.js", "src/*/*.js"],
-        tasks: ["browserify"]
+    sass: {
+      options: {
+        sourceMap: false,
+        outputStyle: 'nested',
+        sourceComments: false
+      },
+      dist: {
+        files: {
+          'src/css/main.css': 'src/scss/main.scss'
+        }
       }
     },
+    atomizer: {
+      // basic
+      atomize: {
+        options: {
+          configFile: 'src/atomConfig.js'
+        },
+        files: [{
+          src: ['index.html','src/**/*.html'],
+          dest: 'src/scss/_atom.scss'
+        }]
+      }
+    },
+    watch: {
+      scripts: {
+        files: ["src/**/*.js"],
+        tasks: ["browserify"]
+      },
+      sass: {
+        files: ['src/scss/**/*.scss', 'src/modules/**/*.scss'],
+        tasks: ['sass'],
+        options: {
+//          livereload: false
+        }
+      },
+      atomize: {
+        options: {
+//          livereload: true
+        },
+        files: [
+          'index.html',
+          'src/**/*.html',
+          'src/**/*.js',
+          'src/**/*.css',
+          '!src/scss/_atom.scss',
+          '!src/scss/main.scss',
+          '!src/css/main.css'
+        ],
+        tasks: ['atomizer']
+      }
+    },
+    // https://github.com/senchalabs/connect#readme
     connect: {
       server : {
         options: {
@@ -30,6 +80,9 @@ module.exports = function(grunt) {
           middleware: function (connect, options) {
             return [
               //require('connect-livereload')(),
+              compression({
+                level: 9
+              }),
               serveStatic(options.mybase),
               function (req, res, next) {
                 console.log("req, res", req, res);
@@ -75,10 +128,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  grunt.loadNpmTasks("grunt-browserify");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['browserify']);
   grunt.registerTask('sv', ['connect:server', 'watch']);

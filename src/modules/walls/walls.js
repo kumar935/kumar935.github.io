@@ -1,6 +1,6 @@
 export function walls(){
   "use strict";
   import $ from "jquery";
-  $("body").html("walls");
+  $("body .content").html("walls");
   console.log("walls");
 }

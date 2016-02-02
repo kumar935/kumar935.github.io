@@ -14315,11 +14315,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 require('babelify/polyfill');
 
-var _jquery = require('jquery');
+var _jquery = require("jquery");
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
 var _router = require('./router');
+
+var _homeHome = require('./home/home');
+
+var _wallsWalls = require('./walls/walls');
 
 // configuration
 _router.Router.config({ mode: 'history' });
@@ -14332,26 +14336,31 @@ var reqPath = window.location.pathname;
 _router.Router.navigate("0");
 
 // adding routes
-_router.Router.add(/about/, function () {
-  console.log('about');
-}).add(/products\/(.*)\/edit\/(.*)/, function () {
-  console.log('products', arguments);
-}).add(function () {
-  console.log('default');
-}).listen();
+_router.Router.add(/walls/, _wallsWalls.walls).add(_homeHome.home).listen();
 
 // So when user hits a url directly from the url Box, this line will navigate the page to there.
 _router.Router.navigate(reqPath);
 
-_jquery2['default'](function () {
-  _jquery2['default']('#url').on("keyup", function (e, target, value) {
-    if (e.which === 13) {
-      _router.Router.navigate(_jquery2['default']("#url").val());
-    }
-  });
-});
+},{"./home/home":195,"./router":196,"./walls/walls":197,"babelify/polyfill":3,"jquery":192}],195:[function(require,module,exports){
+"use strict";
 
-},{"./router":195,"babelify/polyfill":3,"jquery":192}],195:[function(require,module,exports){
+exports.__esModule = true;
+exports.home = home;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function home() {
+  "use strict";
+
+  var _jquery = require("jquery");
+
+  var _jquery2 = _interopRequireDefault(_jquery);
+
+  _jquery2["default"]("body").html("home");
+  console.log("home");
+}
+
+},{"jquery":192}],196:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -14439,4 +14448,23 @@ var Router = {
 };
 exports.Router = Router;
 
-},{}]},{},[194]);
+},{}],197:[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+exports.walls = walls;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function walls() {
+  "use strict";
+
+  var _jquery = require("jquery");
+
+  var _jquery2 = _interopRequireDefault(_jquery);
+
+  _jquery2["default"]("body").html("walls");
+  console.log("walls");
+}
+
+},{"jquery":192}]},{},[194]);

@@ -1,6 +1,8 @@
 import 'babelify/polyfill';
-import $ from 'jquery';
+import $ from "jquery";
 import {Router} from './router';
+import {home} from './home/home';
+import {walls} from './walls/walls';
 
 // configuration
 Router.config({ mode: 'history'});
@@ -14,26 +16,9 @@ Router.navigate("0");
 
 // adding routes
 Router
-  .add(/about/, function() {
-    console.log('about');
-  })
-  .add(/products\/(.*)\/edit\/(.*)/, function() {
-    console.log('products', arguments);
-  })
-  .add(function() {
-    console.log('default');
-  })
+  .add(/walls/, walls)
+  .add(home)
   .listen();
 
 // So when user hits a url directly from the url Box, this line will navigate the page to there.
 Router.navigate(reqPath);
-
-$(
-  function(){
-    $('#url').on("keyup", function(e,target,value){
-      if(e.which === 13){
-        Router.navigate($("#url").val());
-      }
-    });
-  }
-);

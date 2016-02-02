@@ -1,9 +1,13 @@
 {
   "firebase": "animesh",
-  "public": "**/.*",
+  "public": "public/kumar935.github.io",
   "ignore": [
     "firebase.json",
     "**/.*",
     "**/node_modules/**"
-  ]
+  ],
+  "rewrites": [ {
+    "source": "**",
+    "destination": "/index.html"
+  } ]
 }

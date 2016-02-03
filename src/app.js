@@ -1,8 +1,18 @@
 import 'babelify/polyfill';
 import $ from "jquery";
+import _ from "underscore";
 import {Router} from './router';
+import {nav} from './modules/nav/nav';
 import {home} from './modules/home/home';
 import {walls} from './modules/walls/walls';
+
+//override underscore template settings
+_.templateSettings.interpolate = /\{\{(.+?)\}\}/g;
+_.templateSettings.evaluate = /<!--([\s\S]+?)-->/g;
+_.templateSettings.escape = /\{\{-(.+?)\}\}/g;
+
+//load Nav Bar
+nav();
 
 // configuration
 Router.config({ mode: 'history'});
@@ -24,3 +34,5 @@ Router
 
 // So when user hits a url directly from the url Box, this line will navigate the page to there.
 Router.navigate(reqPath);
+
+window.$ = $;

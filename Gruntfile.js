@@ -85,17 +85,13 @@ module.exports = function(grunt) {
               }),
               serveStatic(options.mybase),
               function (req, res, next) {
-                console.log("req, res", req, res);
                 if (req.headers.origin === undefined) {
                   res.setHeader('Access-Control-Allow-Origin', "*");
                 } else {
                   res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
                 }
                 res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-                console.log(req.method + " on " + req.originalUrl);
                 if (!(/\/(src|dist|data)\//).test(req.originalUrl)) {
-                  console.log("src|dist|data.test(req.originalUrl)", (/\/(src|dist|data)\//).test(req.originalUrl));
-                  console.log("req.originalUrl", req.originalUrl);
                   var body = grunt.file.read("index.html");
                   res.write(body);
                   res.end();
@@ -105,7 +101,6 @@ module.exports = function(grunt) {
                   res.setHeader('Content-Length', '0');
                   res.setHeader('Content-Type', 'application/json; charset=utf-8');
                   datahandler(req, res, STUBS_URL, function(){
-                    console.log("first end");
                     res.end();
                     //next();
                   });
@@ -115,7 +110,6 @@ module.exports = function(grunt) {
                 if (!(/\/(src|dist|data)\//).test(req.originalUrl)) {
                   var body = grunt.file.read("index.html");
                   res.write(body);
-                  console.log("2nd end");
                   res.end();
                 } else {
                   next();

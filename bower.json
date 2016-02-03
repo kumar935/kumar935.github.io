@@ -1,0 +1,27 @@
+{
+  "name": "arsenal",
+  "description": "My personal batcave",
+  "main": "index.html",
+  "authors": [
+    "animesh <kanimesh.s@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website"
+  ],
+  "homepage": "https://animesh.firebaseapp.com",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html2canvas": "^0.4.1"
+  }
+}

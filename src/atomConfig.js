@@ -1,5 +1,6 @@
 module.exports = {
   "custom": {
-    "Bgc($primary)": "#f3f3f3"
+    "$violet": "#6e5eff",
+    "$green": "#4DC3A8"
   }
 };

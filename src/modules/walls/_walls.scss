@@ -1,0 +1,33 @@
+.walls-generated{
+  .background{
+    background-color: #eee;
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    .quoteBox{
+      /* background: rgba(255,255,255, 0.2); */
+      margin: 0 auto;
+    }
+
+    .quoteContainer, .dummy{
+      font-family: $Lucida;
+      font-size: 36px;
+    }
+
+    .line{
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .quoteBy{
+      font-size: 36px !important;
+      width: 100%;
+      text-align: right;
+    }
+  }
+  .dummy{
+    height: 0;
+  }
+}

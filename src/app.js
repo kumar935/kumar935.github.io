@@ -1,7 +1,7 @@
 import 'babelify/polyfill';
 import $ from "jquery";
 import _ from "underscore";
-import {Router} from './router';
+import {Router} from './modules/router/router';
 import {nav} from './modules/nav/nav';
 import {home} from './modules/home/home';
 import {walls} from './modules/walls/walls';

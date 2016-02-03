@@ -1,0 +1,15 @@
+.nav-lv1{
+  .nav-lv2{
+    navitem{
+      background: #eee;
+      color: #666;
+      font-family: $Lucida;
+      padding: 12px;
+      margin: 1px;
+      &.active, &:hover{
+        background: $green;
+        color: #fff;
+      }
+    }
+  }
+}

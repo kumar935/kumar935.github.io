@@ -3,9 +3,16 @@ export function walls() {
 import $ from "jquery";
 import _ from "underscore";
 import '../../external/html2canvas/build/html2canvas.min';
-
+import rivets from "rivets";
   function appendWallPaperTemplate(index) {
-    $(".walls-generated").append('<div class="background" id="wallpaper' + index + '"><div class="quoteBox"><div class="quoteContainer"></div></div></div><a class="download gen-btn" id="download' + index + '">Download</a>');
+    var wallPaperTemplateString = [
+      '<div class="background" id="wallpaper' + index + '">',
+      '<div class="quoteBox">',
+      '<div class="quoteContainer">',
+      '</div></div></div>',
+      '<div><a class="download gen-btn" id="download' + index + '">Download</a></div>'
+    ].join("");
+    $(".walls-generated").append(wallPaperTemplateString);
     return $.when();
   }
 
@@ -30,15 +37,17 @@ import '../../external/html2canvas/build/html2canvas.min';
 
 
   function getOriginalWidth(quote) {
-    $("#wallpaper").find(".quoteContainer").html(quote);
+    $("#dummy").find(".quoteContainer").html(quote);
     var width = $(".quoteContainer").innerWidth();
-    $("#wallpaper").find(".quoteContainer").html("");
+    $("#dummy").find(".quoteContainer").html("");
     return width;
   }
 
   function generateWallpapers(quotes){
 
   }
+
+  console.log("rivets",rivets);
 
   fetch('src/modules/walls/walls.html')
     .then(template => template.text())
@@ -76,10 +85,9 @@ import '../../external/html2canvas/build/html2canvas.min';
         "Roads in the mountains teach you a very important lesson in life. what seems like an END is very often just a BEND.",
         "I hated every minute of training, but I said, Don't Quit. Suffer now and live the rest of your life as champion.",
         "Have you ever seen books or courses titled. “Learn Aeronautical Engineering in 21 Days” or “Bridge Construction for Idiots”?. Of course not, yet good developers will spend just as long learning their craft. The primary difference is that development has a lower barrier to entry, and you’re less likely to hurt anyone with shoddy code. … unless your software is used to design aircraft or bridges!. ------------------ Coding is difficult ------------------. You’ll be able to create a few simple programs within days,. but you’ll need many months’ knowledge to confidently tackle a large application. Most professional jobs require several years of solid experience. Even then, you’re always learning.",
-        "We all die, The goal isn't to live forever. the goal is to create something that will."
+        "We all die, The goal isn't to live forever. the goal is to create something that will.",
+        "We are drowning in information while starving for wisdom."
       ];
-
-      var wallPaperTemplate = '<div class="background" id=""><div class="quoteBox"><div class="quoteContainer"></div></div></div>';
 
       var allQuotes = {};
 
@@ -98,16 +106,11 @@ import '../../external/html2canvas/build/html2canvas.min';
 
           appendWallPaperTemplate(i).done(function () {
 
-            if (light === true) {
-              images = lightImages;
-              light = false;
-              fontColor = "#000000";
-            } else {
-              images = darkImages;
-              light = true;
-              fontColor = "#ffffff";
-            }
-            $("#wallpaper" + i).css('background', 'url(' + images[Math.round(Math.random() * (images.length - 1 ))] + ') no-repeat center center fixed');
+            images = light ? lightImages : darkImages;
+            fontColor = light ? "#000" : "#fff";
+            light = !light;
+
+            $("#wallpaper" + i).css('background', 'url(' + images[Math.round(Math.random() * (images.length - 1 ))] + ') no-repeat center center');
             $("#wallpaper" + i).css('background-size', '150%');
             var $quoteContainer = $("#wallpaper" + i).find(".quoteContainer");
             $quoteContainer.css("color", fontColor);
@@ -137,16 +140,11 @@ import '../../external/html2canvas/build/html2canvas.min';
                   document.body.appendChild(canvas);
                   $(canvas).attr("id", "canvas" + i);
                   // Convert and download as image
-//                 Canvas2Image.saveAsPNG(canvas);
                   $("#wallpaper" + i).replaceWith(canvas);
-                  // Clean up
-                  //document.body.removeChild(canvas);
                   document.getElementById('download' + i).addEventListener('click', function () {
                     downloadCanvas(this, 'canvas' + i, 'test.png');
                   }, false);
-
                 }
-
               });
             }
 

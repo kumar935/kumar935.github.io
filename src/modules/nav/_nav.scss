@@ -1,14 +1,14 @@
 .nav-lv1{
   .nav-lv2{
     navitem{
-      background: #eee;
       color: #666;
-      font-family: $Lucida;
-      padding: 12px;
-      margin: 1px;
+      font-family: $Roboto;
+      font-weight: 100;
+      font-size: 14px;
+      padding: 9px;
+      margin: 6px 6px 0px 6px;
       &.active, &:hover{
-        background: $green;
-        color: #fff;
+        border-bottom: 2px solid $green;
       }
     }
   }

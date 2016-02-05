@@ -18372,6 +18372,8 @@ function walls() {
 
   var _jquery2 = _interopRequireDefault(_jquery);
 
+  window.jQuery = _jquery2["default"]; //rivets below can't find jQuery variable from jQuery, so I had to do this.
+
   var _underscore = require("underscore");
 
   var _underscore2 = _interopRequireDefault(_underscore);
@@ -18415,8 +18417,6 @@ function walls() {
   }
 
   function generateWallpapers(quotes) {}
-
-  console.log("rivets", _rivets2["default"]);
 
   fetch('src/modules/walls/walls.html').then(function (template) {
     return template.text();

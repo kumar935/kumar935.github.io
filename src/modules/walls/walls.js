@@ -1,6 +1,7 @@
 export function walls() {
   "use strict";
 import $ from "jquery";
+window.jQuery = $; //rivets below can't find jQuery variable from jQuery, so I had to do this.
 import _ from "underscore";
 import '../../external/html2canvas/build/html2canvas.min';
 import rivets from "rivets";
@@ -47,7 +48,6 @@ import rivets from "rivets";
 
   }
 
-  console.log("rivets",rivets);
 
   fetch('src/modules/walls/walls.html')
     .then(template => template.text())

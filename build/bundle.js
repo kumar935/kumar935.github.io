@@ -18370,6 +18370,11 @@ var repeatLight = ["data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My
 var darkImages = ["data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgogIAk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZmZmJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMCknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoOSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMy41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDE4KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDIyLjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjcpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMzEuNSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgzNiknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0MC41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDQ1KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDQ5LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNTQpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNTguNSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg2MyknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg2Ny41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDcyKScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDc2LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoODEpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoODUuNSknLz4KICA8L3N2Zz4=", "data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgogICAgPHJlY3Qgd2lkdGg9JzEwMDAlJyBoZWlnaHQ9JzEwMDAlJyBmaWxsPScjZmZmJy8+CiAgICA8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjODA0MTA3Jy8+CiAgICA8c3ZnIHg9JzUwJScgeT0nNTAlJyBvdmVyZmxvdz0ndmlzaWJsZSc+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDIwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDgwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMDApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDEyMCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMTQwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxNjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjAwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgyMjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDI0MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjYwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgyODApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDMwMCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMzIwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgzNDApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDM2MCknLz4KCiAgICA8L3N2Zz4KICA8L3N2Zz4="];
 
 var defaultMaxWidthBeforeLineBreak = 850;
+// 91 'd's covered 602px
+var charactersPerLine = 91;
+var characterPerPixel = charactersPerLine / 602;
+
+var textAreaSingleLineCharacterLength = characterPerPixel * 1;
 
 var images = {
   "LIGHT": lightImages,
@@ -18381,7 +18386,18 @@ var characterReplaceMap = {
   "|": "-"
 };
 
-var quotes = ["There are a lot of ways to neutralise your enemy. Forgiving him is the first of all.", "If you run away from it, grief will chase you. Stand your ground, it will run away from you.", "If you always put limits on everything you do, physical or anything else,. it will spread into your work and into your life. There are no limits. There are only plateaus,. and you must not stay there, you must go beyond them. |Bruce Lee", "Unless you try to do something beyond. what you have already mastered you will never grow", "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma — which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.", "Roads in the mountains teach you a very important lesson in life. what seems like an END is very often just a BEND.", "I hated every minute of training, but I said, Don't Quit. Suffer now and live the rest of your life as champion.", "Have you ever seen books or courses titled. “Learn Aeronautical Engineering in 21 Days” or “Bridge Construction for Idiots”?. Of course not, yet good developers will spend just as long learning their craft. The primary difference is that development has a lower barrier to entry, and you’re less likely to hurt anyone with shoddy code. … unless your software is used to design aircraft or bridges!. ------------------ Coding is difficult ------------------. You’ll be able to create a few simple programs within days,. but you’ll need many months’ knowledge to confidently tackle a large application. Most professional jobs require several years of solid experience. Even then, you’re always learning.", "We all die, The goal isn't to live forever. the goal is to create something that will.", "We are drowning in information while starving for wisdom."];
+var quotes = ["There are a lot of ways to neutralise your enemy. Forgiving him is the first of all.", "If you run away from it, grief will chase you. Stand your ground, it will run away from you.", "If you always put limits on everything you do, physical or anything else,. it will spread into your work and into your life. There are no limits. There are only plateaus,. and you must not stay there, you must go beyond them. |Bruce Lee", "Unless you try to do something beyond. what you have already mastered you will never grow", "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma: which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.", "Roads in the mountains teach you a very important lesson in life. what seems like an END is very often just a BEND.", "I hated every minute of training, but I said, Don't Quit. Suffer now and live the rest of your life as champion.", "Have you ever seen books or courses titled. 'Learn Aeronautical Engineering in 21 Days' or 'Bridge Construction for Idiots'?. Of course not, yet good developers will spend just as long learning their craft. The primary difference is that development has a lower barrier to entry, and you're less likely to hurt anyone with shoddy code. … unless your software is used to design aircraft or bridges!. -        Coding is difficult        - . You'll be able to create a few simple programs within days,. but you'll need many months' knowledge to confidently tackle a large application. Most professional jobs require several years of solid experience. Even then, you're always learning.", "We all die, The goal isn't to live forever. the goal is to create something that will.", "We are drowning in information while starving for wisdom."];
+
+var newQuoteIndex = 1;
+var quotesObj = quotes.map(function (quote, i) {
+  return {
+    id: "" + i,
+    editId: "E" + i,
+    text: quote,
+    editMode: false,
+    rows: Math.round(quote.length / charactersPerLine) + 1
+  };
+});
 
 function walls() {
   "use strict";
@@ -18411,13 +18427,41 @@ function walls() {
   }).then(function (templateString) {
     return self.$$.html(_underscore2["default"].template(templateString)({}));
   }).then(function () {
-
-    _jquery2["default"]("#generate-wallpapers").on("click", generateWallpapers.bind(self));
+    _rivets2["default"].bind(self.$$, {
+      model: {
+        quotes: quotesObj,
+        actions: {
+          editModeOff: turnEditModeOff(),
+          focusTextArea: focusTextArea()
+        }
+      }
+    });
+    _jquery2["default"]("#generate-wallpapers").on("click", generateWallpapers);
+    _jquery2["default"](".newQuote").on("keypress", addNewQuote);
   });
 }
 
+function addNewQuote(e) {
+  if (e.which === 13) {
+    var quote = $(this).val();
+    if (quote === "") {
+      return false;
+    }
+    quotesObj.unshift({
+      id: "N" + newQuoteIndex,
+      editId: "NE" + newQuoteIndex,
+      text: quote,
+      editMode: false,
+      rows: Math.round(quote.length / charactersPerLine) + 1
+    });
+    newQuoteIndex = newQuoteIndex + 1;
+    $(this).val("");
+    return false;
+  }
+}
+
 function appendWallPaperTemplate(index) {
-  var wallPaperTemplateString = ['<div class="background" id="wallpaper' + index + '">', '<div class="quoteBox">', '<div class="quoteContainer">', '</div></div></div>', '<div><a class="download gen-btn" id="download' + index + '">Download</a></div>'].join("");
+  var wallPaperTemplateString = ['<div class="background" id="wallpaper' + index + '">', '<div class="quoteBox">', '<div class="quoteContainer">', '</div></div></div>', '<div class="downloadBtnContainer"><a class="download gen-btn" id="download' + index + '">Download</a></div>'].join("");
   $(".walls-generated").append(wallPaperTemplateString);
   return $.when();
 }
@@ -18468,7 +18512,7 @@ function generateWallPaper(quote, styles, id) {
   });
 
   if (quotePartOccupyWidth < maxWidthBeforeLineBreak) {
-    quoteTemplate = quote;
+    quoteTemplate = '<div class="line">' + quote + '</div>';
   } else {
     quoteTemplate = quoteParts.map(function (part, i) {
       if (part.indexOf("|") !== -1) {
@@ -18489,22 +18533,47 @@ function generateWallPaper(quote, styles, id) {
 
 function generateWallpapers() {
   var self = this;
-  quotes.map(function (quote, i) {
+  $("#dummy").siblings().remove(); //need dummy to be there
+  var finalQuoteList = quotesObj.map(function (quoteObj) {
+    return quoteObj.text;
+  });
+  finalQuoteList.map(function (quote, i) {
     appendWallPaperTemplate(i).done(function () {
       generateWallPaper(quote, {}, i);
-      //      html2canvas($("#wallpaper" + i), {
-      //        onrendered: function (canvas) {
-      //          document.body.appendChild(canvas);
-      //          $(canvas).attr("id", "canvas" + i);
-      //          // Convert and download as image
-      //          $("#wallpaper" + i).replaceWith(canvas);
-      //          document.getElementById('download' + i).addEventListener('click', function () {
-      //            downloadCanvas(this, 'canvas' + i, 'test.png');
-      //          }, false);
-      //        }
-      //      });
+      html2canvas($("#wallpaper" + i), {
+        onrendered: function onrendered(canvas) {
+          document.body.appendChild(canvas);
+          $(canvas).attr("id", "canvas" + i);
+          // Convert and download as image
+          $("#wallpaper" + i).replaceWith(canvas);
+          document.getElementById('download' + i).addEventListener('click', function () {
+            downloadCanvas(this, 'canvas' + i, 'test.png');
+          }, false);
+        }
+      });
     });
   });
+}
+
+function turnEditModeOff(e) {
+  return function (e) {
+    if (!e.shift && e.which === 13) {
+      var quoteid = $(this).attr("quoteid");
+      quotesObj.map(function (quoteObj) {
+        if (quoteObj.id === quoteid) {
+          quoteObj.editMode = false;
+        }
+      });
+      return false; //to prevent line break in textarea
+    }
+  };
+}
+
+function focusTextArea(e) {
+  return function (e) {
+    //this function only seems to get fired when input is checked, not when unchecked
+    $(this).siblings("textarea").focus();
+  };
 }
 
 },{"../../external/html2canvas/build/html2canvas.min":198,"jquery":192,"rivets":194,"underscore":196}]},{},[197]);

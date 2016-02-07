@@ -16,6 +16,28 @@ module.exports = function(grunt) {
         }
       }
     },
+    webfont: {
+      icons: {
+        src: 'src/img/svg-icons/*.svg',
+        dest: 'src/fonts/',
+        destCss: 'src/scss',
+        options: {
+          font: 'fontcustom',
+          stylesheet: 'scss',
+          relativeFontPath: "../fonts/",
+          hashes: true
+        }
+      }
+    },
+    sprite: {
+      all: {
+        src: 'src/img/icons/*.png',
+        dest: 'src/img/allIcons.png',
+        destCss: 'src/scss/_sprites.scss',
+        padding: 10,
+        cssTemplate: 'src/img/icons/template.handlebars'
+      }
+    },
     sass: {
       options: {
         sourceMap: false,
@@ -44,6 +66,10 @@ module.exports = function(grunt) {
       scripts: {
         files: ["src/**/*.js"],
         tasks: ["browserify"]
+      },
+      sprite: {
+        files: ['src/img/icons/*.png'],
+        tasks: ['sprite']
       },
       sass: {
         files: ['src/scss/**/*.scss', 'src/modules/**/*.scss'],
@@ -76,7 +102,7 @@ module.exports = function(grunt) {
           hostname: "*",
           base: './',
           mybase: "./",
-          keepalive: true,
+          keepalive: false,
           middleware: function (connect, options) {
             return [
               //require('connect-livereload')(),

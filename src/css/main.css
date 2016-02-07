@@ -4,12 +4,21 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,100italic,300italic,400italic);
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
 @import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700,300);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
 * {
   margin: 0;
   padding: 0; }
 
 .D\(f\) {
   display: flex; }
+
+.D\(n\) {
+  display: none; }
 
 .Fld\(r\) {
   flex-direction: row; }
@@ -30,8 +39,14 @@
 .W\(1\/1\) {
   width: 100%; }
 
+.W\(3\/10\) {
+  width: 30%; }
+
 [route] {
   cursor: pointer; }
+
+[module] {
+  width: 100%; }
 
 input:focus, button:focus, textarea:focus {
   outline: none; }
@@ -50,6 +65,614 @@ button, .gen-btn {
     color: white;
     border: 1px solid transparent; }
 
+textarea {
+  margin-bottom: 18px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  padding: 5px 0px;
+  font-size: 12.9px;
+  color: #888;
+  line-height: 17px; }
+
+::-webkit-resizer {
+  display: none; }
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("../fonts/fontcustom.eot?b82bb898396696756379e2ac6634fe7c");
+  src: url("../fonts/fontcustom.eot?#iefix") format("embedded-opentype"), url("../fonts/fontcustom.woff?b82bb898396696756379e2ac6634fe7c") format("woff"), url("../fonts/fontcustom.ttf?b82bb898396696756379e2ac6634fe7c") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon {
+  font-family: "fontcustom";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon_addAddress:before {
+  content: "\f101"; }
+
+.icon_added:before {
+  content: "\f102"; }
+
+.icon_alarm:before {
+  content: "\f103"; }
+
+.icon_alert:before {
+  content: "\f104"; }
+
+.icon_apartment:before {
+  content: "\f105"; }
+
+.icon_arrow-down-circle:before {
+  content: "\f106"; }
+
+.icon_arrow-down:before {
+  content: "\f107"; }
+
+.icon_arrow-left-circle:before {
+  content: "\f108"; }
+
+.icon_arrow-left:before {
+  content: "\f109"; }
+
+.icon_arrow-right-circle:before {
+  content: "\f10a"; }
+
+.icon_arrow-right:before {
+  content: "\f10b"; }
+
+.icon_arrow-up-circle:before {
+  content: "\f10c"; }
+
+.icon_arrow-up:before {
+  content: "\f10d"; }
+
+.icon_bicycle:before {
+  content: "\f10e"; }
+
+.icon_bold:before {
+  content: "\f10f"; }
+
+.icon_book:before {
+  content: "\f110"; }
+
+.icon_bookmark:before {
+  content: "\f111"; }
+
+.icon_briefcase:before {
+  content: "\f112"; }
+
+.icon_bubble:before {
+  content: "\f113"; }
+
+.icon_bug:before {
+  content: "\f114"; }
+
+.icon_bullhorn:before {
+  content: "\f115"; }
+
+.icon_bus:before {
+  content: "\f116"; }
+
+.icon_calendar-full:before {
+  content: "\f117"; }
+
+.icon_camera-video:before {
+  content: "\f118"; }
+
+.icon_camera:before {
+  content: "\f119"; }
+
+.icon_car:before {
+  content: "\f11a"; }
+
+.icon_cart:before {
+  content: "\f11b"; }
+
+.icon_chart-bars:before {
+  content: "\f11c"; }
+
+.icon_checkmark-circle:before {
+  content: "\f11d"; }
+
+.icon_chevron-down-circle:before {
+  content: "\f11e"; }
+
+.icon_chevron-down:before {
+  content: "\f11f"; }
+
+.icon_chevron-left-circle:before {
+  content: "\f120"; }
+
+.icon_chevron-left:before {
+  content: "\f121"; }
+
+.icon_chevron-right-circle:before {
+  content: "\f122"; }
+
+.icon_chevron-right:before {
+  content: "\f123"; }
+
+.icon_chevron-up-circle:before {
+  content: "\f124"; }
+
+.icon_chevron-up:before {
+  content: "\f125"; }
+
+.icon_circle-minus:before {
+  content: "\f126"; }
+
+.icon_clock:before {
+  content: "\f127"; }
+
+.icon_cloud-check:before {
+  content: "\f128"; }
+
+.icon_cloud-download:before {
+  content: "\f129"; }
+
+.icon_cloud-sync:before {
+  content: "\f12a"; }
+
+.icon_cloud-upload:before {
+  content: "\f12b"; }
+
+.icon_cloud:before {
+  content: "\f12c"; }
+
+.icon_code:before {
+  content: "\f12d"; }
+
+.icon_coffee-cup:before {
+  content: "\f12e"; }
+
+.icon_cog:before {
+  content: "\f12f"; }
+
+.icon_construction:before {
+  content: "\f130"; }
+
+.icon_crop:before {
+  content: "\f131"; }
+
+.icon_cross-circle:before {
+  content: "\f132"; }
+
+.icon_cross:before {
+  content: "\f133"; }
+
+.icon_database:before {
+  content: "\f134"; }
+
+.icon_diamond:before {
+  content: "\f135"; }
+
+.icon_dice:before {
+  content: "\f136"; }
+
+.icon_dinner:before {
+  content: "\f137"; }
+
+.icon_direction-ltr:before {
+  content: "\f138"; }
+
+.icon_direction-rtl:before {
+  content: "\f139"; }
+
+.icon_download:before {
+  content: "\f13a"; }
+
+.icon_drop:before {
+  content: "\f13b"; }
+
+.icon_earth:before {
+  content: "\f13c"; }
+
+.icon_enter-down:before {
+  content: "\f13d"; }
+
+.icon_enter:before {
+  content: "\f13e"; }
+
+.icon_envelope:before {
+  content: "\f13f"; }
+
+.icon_exit-up:before {
+  content: "\f140"; }
+
+.icon_exit:before {
+  content: "\f141"; }
+
+.icon_eye:before {
+  content: "\f142"; }
+
+.icon_file-add:before {
+  content: "\f143"; }
+
+.icon_file-empty:before {
+  content: "\f144"; }
+
+.icon_film-play:before {
+  content: "\f145"; }
+
+.icon_flag:before {
+  content: "\f146"; }
+
+.icon_frame-contract:before {
+  content: "\f147"; }
+
+.icon_frame-expand:before {
+  content: "\f148"; }
+
+.icon_funnel:before {
+  content: "\f149"; }
+
+.icon_gift:before {
+  content: "\f14a"; }
+
+.icon_graduation-hat:before {
+  content: "\f14b"; }
+
+.icon_hand:before {
+  content: "\f14c"; }
+
+.icon_heart-pulse:before {
+  content: "\f14d"; }
+
+.icon_heart:before {
+  content: "\f14e"; }
+
+.icon_highlight:before {
+  content: "\f14f"; }
+
+.icon_history:before {
+  content: "\f150"; }
+
+.icon_home:before {
+  content: "\f151"; }
+
+.icon_hourglass:before {
+  content: "\f152"; }
+
+.icon_inbox:before {
+  content: "\f153"; }
+
+.icon_indent-decrease:before {
+  content: "\f154"; }
+
+.icon_indent-increase:before {
+  content: "\f155"; }
+
+.icon_italic:before {
+  content: "\f156"; }
+
+.icon_keyboard:before {
+  content: "\f157"; }
+
+.icon_laptop-phone:before {
+  content: "\f158"; }
+
+.icon_laptop:before {
+  content: "\f159"; }
+
+.icon_layers:before {
+  content: "\f15a"; }
+
+.icon_leaf:before {
+  content: "\f15b"; }
+
+.icon_license:before {
+  content: "\f15c"; }
+
+.icon_lighter:before {
+  content: "\f15d"; }
+
+.icon_line-spacing:before {
+  content: "\f15e"; }
+
+.icon_linearicons:before {
+  content: "\f15f"; }
+
+.icon_link:before {
+  content: "\f160"; }
+
+.icon_list:before {
+  content: "\f161"; }
+
+.icon_location:before {
+  content: "\f162"; }
+
+.icon_lock:before {
+  content: "\f163"; }
+
+.icon_magic-wand:before {
+  content: "\f164"; }
+
+.icon_magnifier:before {
+  content: "\f165"; }
+
+.icon_map-marker:before {
+  content: "\f166"; }
+
+.icon_map:before {
+  content: "\f167"; }
+
+.icon_menu-circle:before {
+  content: "\f168"; }
+
+.icon_menu:before {
+  content: "\f169"; }
+
+.icon_mic:before {
+  content: "\f16a"; }
+
+.icon_moon:before {
+  content: "\f16b"; }
+
+.icon_move:before {
+  content: "\f16c"; }
+
+.icon_music-note:before {
+  content: "\f16d"; }
+
+.icon_mustache:before {
+  content: "\f16e"; }
+
+.icon_neutral:before {
+  content: "\f16f"; }
+
+.icon_page-break:before {
+  content: "\f170"; }
+
+.icon_paperclip:before {
+  content: "\f171"; }
+
+.icon_paw:before {
+  content: "\f172"; }
+
+.icon_pencil:before {
+  content: "\f173"; }
+
+.icon_phone-handset:before {
+  content: "\f174"; }
+
+.icon_phone:before {
+  content: "\f175"; }
+
+.icon_picture:before {
+  content: "\f176"; }
+
+.icon_pie-chart:before {
+  content: "\f177"; }
+
+.icon_pilcrow:before {
+  content: "\f178"; }
+
+.icon_plus-circle:before {
+  content: "\f179"; }
+
+.icon_pointer-down:before {
+  content: "\f17a"; }
+
+.icon_pointer-left:before {
+  content: "\f17b"; }
+
+.icon_pointer-right:before {
+  content: "\f17c"; }
+
+.icon_pointer-up:before {
+  content: "\f17d"; }
+
+.icon_poop:before {
+  content: "\f17e"; }
+
+.icon_power-switch:before {
+  content: "\f17f"; }
+
+.icon_printer:before {
+  content: "\f180"; }
+
+.icon_pushpin:before {
+  content: "\f181"; }
+
+.icon_question-circle:before {
+  content: "\f182"; }
+
+.icon_redo:before {
+  content: "\f183"; }
+
+.icon_rocket:before {
+  content: "\f184"; }
+
+.icon_sad:before {
+  content: "\f185"; }
+
+.icon_screen:before {
+  content: "\f186"; }
+
+.icon_select:before {
+  content: "\f187"; }
+
+.icon_shirt:before {
+  content: "\f188"; }
+
+.icon_smartphone:before {
+  content: "\f189"; }
+
+.icon_smile:before {
+  content: "\f18a"; }
+
+.icon_sort-alpha-asc:before {
+  content: "\f18b"; }
+
+.icon_sort-amount-asc:before {
+  content: "\f18c"; }
+
+.icon_spell-check:before {
+  content: "\f18d"; }
+
+.icon_star-empty:before {
+  content: "\f18e"; }
+
+.icon_star-half:before {
+  content: "\f18f"; }
+
+.icon_star:before {
+  content: "\f190"; }
+
+.icon_store:before {
+  content: "\f191"; }
+
+.icon_strikethrough:before {
+  content: "\f192"; }
+
+.icon_sun:before {
+  content: "\f193"; }
+
+.icon_sync:before {
+  content: "\f194"; }
+
+.icon_tablet:before {
+  content: "\f195"; }
+
+.icon_tag:before {
+  content: "\f196"; }
+
+.icon_text-align-center:before {
+  content: "\f197"; }
+
+.icon_text-align-justify:before {
+  content: "\f198"; }
+
+.icon_text-align-left:before {
+  content: "\f199"; }
+
+.icon_text-align-right:before {
+  content: "\f19a"; }
+
+.icon_text-format-remove:before {
+  content: "\f19b"; }
+
+.icon_text-format:before {
+  content: "\f19c"; }
+
+.icon_text-size:before {
+  content: "\f19d"; }
+
+.icon_thumbs-down:before {
+  content: "\f19e"; }
+
+.icon_thumbs-up:before {
+  content: "\f19f"; }
+
+.icon_train:before {
+  content: "\f1a0"; }
+
+.icon_trash:before {
+  content: "\f1a1"; }
+
+.icon_underline:before {
+  content: "\f1a2"; }
+
+.icon_undo:before {
+  content: "\f1a3"; }
+
+.icon_unlink:before {
+  content: "\f1a4"; }
+
+.icon_upload:before {
+  content: "\f1a5"; }
+
+.icon_user:before {
+  content: "\f1a6"; }
+
+.icon_users:before {
+  content: "\f1a7"; }
+
+.icon_volume-high:before {
+  content: "\f1a8"; }
+
+.icon_volume-low:before {
+  content: "\f1a9"; }
+
+.icon_volume-medium:before {
+  content: "\f1aa"; }
+
+.icon_volume:before {
+  content: "\f1ab"; }
+
+.icon_warning:before {
+  content: "\f1ac"; }
+
+.icon_wheelchair:before {
+  content: "\f1ad"; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.icons-attachment {
+  display: block;
+  background-image: url(../img/allIcons.png);
+  background-position: -66px 0px;
+  width: 25px;
+  height: 25px; }
+
+.icons-edit {
+  display: block;
+  background-image: url(../img/allIcons.png);
+  background-position: 0px 0px;
+  width: 56px;
+  height: 52px; }
+
 .nav-lv1 .nav-lv2 navitem {
   color: #666;
   font-family: "Roboto Slab";
@@ -60,24 +683,36 @@ button, .gen-btn {
   .nav-lv1 .nav-lv2 navitem.active, .nav-lv1 .nav-lv2 navitem:hover {
     border-bottom: 2px solid #4DC3A8; }
 
-.walls-controls .walls-quotes-input textarea {
-  width: 50%;
-  height: 70px;
-  margin-bottom: 18px;
-  background: #F9F9F9;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: "Lato", sans-serif;
-  font-style: italic;
-  font-weight: 300;
-  padding: 5px 7px;
-  font-size: 12.9px;
-  color: #888;
-  line-height: 17px; }
-
-.walls-controls .walls-quotes-input ::-webkit-resizer {
-  display: none; }
+.walls-controls .walls-quotes-input quoteblock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%; }
+  .walls-controls .walls-quotes-input quoteblock textarea {
+    width: 100%; }
+  .walls-controls .walls-quotes-input quoteblock quote {
+    background: #F9F9F9;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 7px;
+    width: 100%;
+    margin-bottom: 18px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: "Lato", sans-serif;
+    font-family: "Dawning of a New Day", cursive;
+    font-family: "Pacifico", cursive;
+    font-family: "Poiret One", cursive;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: "Bree Serif", serif;
+    font-family: "Righteous", cursive;
+    font-family: "Satisfy", cursive;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12.9px;
+    color: #888;
+    line-height: 17px; }
+    .walls-controls .walls-quotes-input quoteblock quote label {
+      cursor: text; }
 
 .walls-generated .background {
   background-color: #eee;
@@ -90,15 +725,27 @@ button, .gen-btn {
     /* background: rgba(255,255,255, 0.2); */
     margin: 0 auto; }
   .walls-generated .background .quoteContainer, .walls-generated .background .dummy {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", serif;
+    font-family: "Amatic SC", cursive;
     font-size: 36px; }
   .walls-generated .background .line {
     display: inline-block;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-family: "Lato", sans-serif;
+    font-family: "Dawning of a New Day", cursive;
+    font-family: "Pacifico", cursive;
+    font-family: "Poiret One", cursive;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: "Bree Serif", serif;
+    font-family: "Righteous", cursive;
+    font-family: "Satisfy", cursive; }
   .walls-generated .background .quoteBy {
     font-size: 36px !important;
     width: 100%;
     text-align: right; }
+
+.walls-generated .downloadBtnContainer {
+  display: flex;
+  justify-content: center; }
 
 .walls-generated .dummy {
   height: 0; }

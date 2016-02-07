@@ -1,26 +1,38 @@
 .walls-controls{
   .walls-quotes-input{
-    textarea{
-      width: 50%;
-      height: 70px;
-      margin-bottom: 18px;
-      background: #F9F9F9;
-      border: 1px solid transparent;
-      border-bottom: 1px solid #ddd;
-      border-radius: 4px;
-      font-family: $Lato;
-      font-style: italic;
-      font-weight: 300;
-      padding: 5px 7px;
-      font-size: 12.9px;
-      color: #888;
-      line-height: 17px;
-      &:focus{
-
+    quoteblock{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      textarea{
+        width: 100%;
       }
-    }
-    ::-webkit-resizer{
-      display: none;
+      quote{
+        background: #F9F9F9;
+        border-bottom: 1px solid #ddd;
+        padding: 5px 7px;
+        width: 100%;
+        margin-bottom: 18px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-family: $Lato;
+        font-family: $Dawn;
+        font-family: $Pacifico;
+        font-family: $Poirot;
+        font-family: $Yanone;
+        font-family: $Bree;
+        font-family: $Righteous;
+        font-family: $Satisfy;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 12.9px;
+        color: #888;
+        line-height: 17px;
+        label{
+          cursor: text;
+        }
+      }
     }
   }
 }
@@ -38,13 +50,21 @@
     }
 
     .quoteContainer, .dummy{
-      font-family: $Lucida;
+      font-family: $Amatic;
       font-size: 36px;
     }
 
     .line{
       display: inline-block;
       white-space: nowrap;
+      font-family: $Lato;
+      font-family: $Dawn;
+      font-family: $Pacifico;
+      font-family: $Poirot;
+      font-family: $Yanone;
+      font-family: $Bree;
+      font-family: $Righteous;
+      font-family: $Satisfy;
     }
 
     .quoteBy{
@@ -52,6 +72,10 @@
       width: 100%;
       text-align: right;
     }
+  }
+  .downloadBtnContainer{
+    display: flex;
+    justify-content: center;
   }
   .dummy{
     height: 0;

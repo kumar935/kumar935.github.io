@@ -1,10 +1,19 @@
 <div class="walls W(1/1)">
     <div class="walls-controls D(f) Jc(c) Py(16px) Fld(c)">
-        <div class="walls-quotes-input D(f) Fld(c) Ai(c)">
-            <textarea class="quotes"/>
-        </div>
-        <div class="walls-buttons D(f) Fld(c) Ai(c)">
+        <div class="walls-buttons D(f) Fld(c) Ai(c) Py(16px)">
             <button id="generate-wallpapers">Generate Wallpapers</button>
+            <textarea class="newQuote W(3/10)"/>
+        </div>
+        <div class="walls-quotes-input D(f) Fld(c) Ai(c)">
+            <quoteblock rv-each-quote="model.quotes" rv-id="quote.id" class="walls-quote-inline">
+                <textarea rv-quoteid="quote.id" rv-value="quote.text" rv-show="quote.editMode" rv-rows="quote.rows" rv-on-keypress="model.actions.editModeOff"></textarea>
+                <quote rv-hide="quote.editMode" rv-for="quote.editId">
+                    <label rv-for="quote.editId">
+                        {quote.text}
+                    </label>
+                </quote>
+                <input type="checkbox" rv-quoteid="quote.id" rv-checked="quote.editMode" rv-id="quote.editId" class="D(n)" rv-on-change="model.actions.focusTextArea">
+            </quoteblock>
         </div>
     </div>
     <div class="walls-generated D(f) Fld(c)">

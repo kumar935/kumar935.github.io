@@ -3,11 +3,26 @@ var lightImages = [
   "data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzgnPgogICAgPGRlZnM+CiAgICAJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MnIHdpZHRoPSc0JyBoZWlnaHQ9JzgnIHg9JzAnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KICAgIAkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyNhMjc1YmInIHN0cm9rZS13aWR0aD0nLjA3JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KICAgIAk8L3BhdHRlcm4+CiAgICAJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNCcgaGVpZ2h0PSc4JyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CiAgICAJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjYTI3NWJiJyBzdHJva2Utd2lkdGg9Jy4wNycgZD0nTTcsMUwtMiwxME03LDZMLTIsMTVNNywtNEwtMiw1Jy8+CiAgICAJPC9wYXR0ZXJuPgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9JzUwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2MpJy8+CiAgICA8cmVjdCB4PSc1MCUnIHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjMiknLz4KICA8L3N2Zz4KICA="
 ];
 var repeatLight = [
-  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0JyBoZWlnaHQ9JzgnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCTxwYXRoIGQ9J00wLDBsNSw1bC01LDVtLTEsLTZsMSwxbC0xLDFNNCwtMWw2LDZsLTYsNicgZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyNjZWM3YzcnIHN0cm9rZS13aWR0aD0nMicvPgo8L3N2Zz4="
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0JyBoZWlnaHQ9JzgnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCTxwYXRoIGQ9J00wLDBsNSw1bC01LDVtLTEsLTZsMSwxbC0xLDFNNCwtMWw2LDZsLTYsNicgZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyNjZWM3YzcnIHN0cm9rZS13aWR0aD0nMicvPgo8L3N2Zz4=",
+  "../../src/img/background/light/congruent_pentagon.png",
+  "../../src/img/background/light/congruent_pentagon.png",
+  "../../src/img/background/light/diagonal_waves.png",
+  "../../src/img/background/light/halftone.png",
+  "../../src/img/background/light/skelatal_weave.png",
+  "../../src/img/background/light/small_steps.png",
+  "../../src/img/background/light/subtle_white_feathers.png",
+  "../../src/img/background/light/swirl_pattern.png",
+  "../../src/img/background/light/tree_bark.png",
+  "../../src/img/background/light/wavegrid.png",
+  "../../src/img/background/light/wov.png"
 ];
 var darkImages = [
   "data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgogIAk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZmZmJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMCknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoOSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMy41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDE4KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDIyLjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjcpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMzEuNSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgzNiknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0MC41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDQ1KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDQ5LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNTQpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNTguNSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg2MyknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg2Ny41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDcyKScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDc2LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoODEpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoODUuNSknLz4KICA8L3N2Zz4=",
   "data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgogICAgPHJlY3Qgd2lkdGg9JzEwMDAlJyBoZWlnaHQ9JzEwMDAlJyBmaWxsPScjZmZmJy8+CiAgICA8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjODA0MTA3Jy8+CiAgICA8c3ZnIHg9JzUwJScgeT0nNTAlJyBvdmVyZmxvdz0ndmlzaWJsZSc+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDIwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDgwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMDApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDEyMCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMTQwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxNjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjAwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgyMjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDI0MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjYwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgyODApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDMwMCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMzIwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgzNDApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDM2MCknLz4KCiAgICA8L3N2Zz4KICA8L3N2Zz4="
+];
+var repeatDark = [
+  "../../src/img/background/dark/congruent_outline.png",
+  "../../src/img/background/dark/footer_lodyas.png"
 ];
 
 var defaultMaxWidthBeforeLineBreak = 850;
@@ -20,7 +35,8 @@ var textAreaSingleLineCharacterLength = characterPerPixel * 1;
 var images = {
   "LIGHT": lightImages,
   "DARK": darkImages,
-  "REPEAT_LIGHT": repeatLight
+  "REPEAT_LIGHT": repeatLight,
+  "REPEAT_DARK": repeatDark
 };
 
 var characterReplaceMap = {
@@ -37,7 +53,9 @@ var quotes = [
   "I hated every minute of training, but I said, Don't Quit. Suffer now and live the rest of your life as champion.",
   "Have you ever seen books or courses titled. 'Learn Aeronautical Engineering in 21 Days' or 'Bridge Construction for Idiots'?. Of course not, yet good developers will spend just as long learning their craft. The primary difference is that development has a lower barrier to entry, and you're less likely to hurt anyone with shoddy code. … unless your software is used to design aircraft or bridges!. -        Coding is difficult        - . You'll be able to create a few simple programs within days,. but you'll need many months' knowledge to confidently tackle a large application. Most professional jobs require several years of solid experience. Even then, you're always learning.",
   "We all die, The goal isn't to live forever. the goal is to create something that will.",
-  "We are drowning in information while starving for wisdom."
+  "We are drowning in information while starving for wisdom.",
+  "Relationships never die a natural death they are always murdered by ego, attitude and ignorance.",
+  "The courage to share your gift with others, is what separates the artist from amateurs"
 ];
 
 var newQuoteIndex = 1;
@@ -145,7 +163,7 @@ function getOriginalWidth(quote) {
 
 function generateWallPaper(quote, styles, id) {
   //styles = {backgroundType, backgroundNo, backgroundZoom, fontColor}
-  var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.DARK,
+  var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.REPEAT_DARK,
       backgroundNo = styles && styles.backgroundNo ? styles.backgroundNo : Math.round(Math.random() * (backgroundList.length - 1 )),
       background = backgroundList[backgroundNo],
       backgroundSize = styles && styles.backgroundZoom ? (styles.backgroundZoom + '%') : '150%',
@@ -157,8 +175,8 @@ function generateWallPaper(quote, styles, id) {
       $quoteContainer = $("#wallpaper"+id).find(".quoteContainer");
 
   $("#wallpaper"+id).css({
-    background : 'url(' + background + ') no-repeat center center',
-    backgroundSize: backgroundSize ,
+    background : 'url(' + background + ') repeat center center',
+//    backgroundSize: backgroundSize ,
     color: fontColor
   });
 

@@ -75,6 +75,11 @@ import $ from "jquery";
 import _ from "underscore";
 import '../../external/html2canvas/build/html2canvas.min';
 import rivets from "rivets";
+import '../util/rivets.custom';
+
+  rivets.formatters.invert = function(value){
+    return !value;
+  };
 
   var self = this;
   self.$$ = $("<div module='walls'></div>");
@@ -99,6 +104,7 @@ import rivets from "rivets";
       });
       $("#generate-wallpapers").on("click", generateWallpapers);
       $(".newQuote").on("keypress", addNewQuote);
+      $("quote").on("mousedown", removeQuote);
 
     });
 
@@ -221,6 +227,19 @@ function generateWallpapers() {
     });
 
   });
+}
+
+function removeQuote(e) {
+  if(e.button === 2){
+    var quoteid = $(this).attr("quoteid");
+    quotesObj.map((quoteObj, i) => {
+      if(quoteObj.id === quoteid){
+        quotesObj.splice(i,1);
+        return false;
+      }
+    });
+    return false;
+  }
 }
 
 function turnEditModeOff(e){

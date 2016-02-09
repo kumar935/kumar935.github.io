@@ -5,9 +5,9 @@
             <textarea class="newQuote W(3/10)"/>
         </div>
         <div class="walls-quotes-input D(f) Fld(c) Ai(c)">
-            <quoteblock rv-each-quote="model.quotes" rv-id="quote.id" class="walls-quote-inline">
-                <textarea rv-quoteid="quote.id" rv-value="quote.text" rv-show="quote.editMode" rv-rows="quote.rows" rv-on-keypress="model.actions.editModeOff"></textarea>
-                <quote rv-hide="quote.editMode" rv-for="quote.editId">
+            <quoteblock rv-each-quote="model.quotes" rv-id="quote.id" class="walls-quote-inline fadein">
+                <textarea rv-quoteid="quote.id" rv-value="quote.text" rv-show="quote.editMode" rv-class-fadein="quote.editMode" rv-rows="quote.rows" rv-on-keypress="model.actions.editModeOff"></textarea>
+                <quote rv-quoteid="quote.id" rv-hide="quote.editMode" rv-class-fadein="quote.editMode | invert" rv-for="quote.editId">
                     <label rv-for="quote.editId">
                         {quote.text}
                     </label>

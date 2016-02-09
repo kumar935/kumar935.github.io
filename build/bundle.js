@@ -17511,7 +17511,7 @@ _modulesRouterRouter.Router.navigate(reqPath);
 
 window.$ = _jquery2["default"];
 
-},{"./modules/home/home":199,"./modules/nav/nav":200,"./modules/router/router":201,"./modules/walls/walls":202,"babelify/polyfill":3,"jquery":192,"underscore":196}],198:[function(require,module,exports){
+},{"./modules/home/home":199,"./modules/nav/nav":200,"./modules/router/router":201,"./modules/walls/walls":203,"babelify/polyfill":3,"jquery":192,"underscore":196}],198:[function(require,module,exports){
 /*
   html2canvas 0.4.1 <http://html2canvas.hertzen.com>
   Copyright (c) 2013 Niklas von Hertzen
@@ -18361,6 +18361,39 @@ exports.Router = Router;
 "use strict";
 
 exports.__esModule = true;
+exports.rivetsCustom = rivetsCustom;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function rivetsCustom() {
+  "use strict";
+
+  var _jquery = require("jquery");
+
+  var _jquery2 = _interopRequireDefault(_jquery);
+
+  var _underscore = require("underscore");
+
+  var _underscore2 = _interopRequireDefault(_underscore);
+
+  var _rivets = require("rivets");
+
+  var _rivets2 = _interopRequireDefault(_rivets);
+
+  _rivets2["default"].binders.tshow = function (el, value) {
+    el.style.display = value === true ? "" : "none";
+    el.style.opacity = value === true ? 1 : 0;
+  };
+  _rivets2["default"].binders.thide = function (el, value) {
+    el.style.display = value === true ? "none" : "";
+    el.style.opacity = value === true ? 0 : 1;
+  };
+}
+
+},{"jquery":192,"rivets":194,"underscore":196}],203:[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
 exports.walls = walls;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -18420,6 +18453,12 @@ function walls() {
 
   var _rivets2 = _interopRequireDefault(_rivets);
 
+  require('../util/rivets.custom');
+
+  _rivets2["default"].formatters.invert = function (value) {
+    return !value;
+  };
+
   var self = this;
   self.$$ = _jquery2["default"]("<div module='walls'></div>");
   _jquery2["default"]("body .content").unbind().off().html(self.$$);
@@ -18440,6 +18479,7 @@ function walls() {
     });
     _jquery2["default"]("#generate-wallpapers").on("click", generateWallpapers);
     _jquery2["default"](".newQuote").on("keypress", addNewQuote);
+    _jquery2["default"]("quote").on("mousedown", removeQuote);
   });
 }
 
@@ -18557,6 +18597,19 @@ function generateWallpapers() {
   });
 }
 
+function removeQuote(e) {
+  if (e.button === 2) {
+    var quoteid = $(this).attr("quoteid");
+    quotesObj.map(function (quoteObj, i) {
+      if (quoteObj.id === quoteid) {
+        quotesObj.splice(i, 1);
+        return false;
+      }
+    });
+    return false;
+  }
+}
+
 function turnEditModeOff(e) {
   return function (e) {
     if (!e.shift && e.which === 13) {
@@ -18578,4 +18631,4 @@ function focusTextArea(e) {
   };
 }
 
-},{"../../external/html2canvas/build/html2canvas.min":198,"jquery":192,"rivets":194,"underscore":196}]},{},[197]);
+},{"../../external/html2canvas/build/html2canvas.min":198,"../util/rivets.custom":202,"jquery":192,"rivets":194,"underscore":196}]},{},[197]);

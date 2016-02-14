@@ -58,7 +58,7 @@ var quotes = [
   "The courage to share your gift with others, is what separates the artist from amateurs"
 ];
 
-var quotesStringSeparator = "]][["
+var quotesStringSeparator = "]][[";
 
 var newQuoteIndex = 1;
 var quotesObj = [];

@@ -18222,8 +18222,11 @@ function home() {
 
   var _jquery2 = _interopRequireDefault(_jquery);
 
-  _jquery2["default"]("body .content").html("");
-  console.log("home");
+  var self = this;
+  self.$$ = _jquery2["default"]("<div module='home'></div>");
+  _jquery2["default"]("body .content").unbind().off().html(self.$$);
+
+  self.$$.html('<img class="fadein" src="../../img/Arsenal.png"/>');
 }
 
 },{"jquery":192}],200:[function(require,module,exports){

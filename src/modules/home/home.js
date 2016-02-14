@@ -1,6 +1,12 @@
 export function home(){
   "use strict";
   import $ from "jquery";
-  $("body .content").html("");
-  console.log("home");
+
+  var self = this;
+  self.$$ = $("<div module='home'></div>");
+  $("body .content")
+    .unbind().off()
+    .html(self.$$);
+
+  self.$$.html('<img class="fadein" src="../../img/Arsenal.png"/>');
 }

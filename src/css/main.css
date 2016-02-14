@@ -732,6 +732,11 @@ The `sprites` mixin generates identical output to the CSS template
   width: 56px;
   height: 52px; }
 
+[module='home'] {
+  display: flex;
+  justify-content: center;
+  padding: 8vw; }
+
 .nav-lv1 .nav-lv2 navitem {
   color: #666;
   font-family: "Roboto Slab";

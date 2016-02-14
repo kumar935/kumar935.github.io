@@ -58,15 +58,10 @@ var quotes = [
   "The courage to share your gift with others, is what separates the artist from amateurs"
 ];
 
+var quotesStringSeparator = "]][["
+
 var newQuoteIndex = 1;
-var quotesObj = quotes.map((quote, i) => ({
-    id: "" + i,
-    editId: "E"+i,
-    text: quote,
-    editMode: false,
-    rows : Math.round(quote.length / charactersPerLine) + 1
-  })
-);
+var quotesObj = [];
 
 export function walls() {
   "use strict";
@@ -87,6 +82,12 @@ import '../util/rivets.custom';
     .unbind().off()
     .html(self.$$);
 
+  if(localStorage.getItem("quotes") !== null){
+    quotes = localStorage.getItem("quotes").split(quotesStringSeparator);
+  }
+  quotesObj = getQuotesObj(quotes);
+  updateLocalStorageQuotes();
+
   fetch('src/modules/walls/walls.html')
     .then(template => template.text())
     .then(templateString =>
@@ -102,6 +103,7 @@ import '../util/rivets.custom';
           }
         }
       });
+
       $("#generate-wallpapers").on("click", generateWallpapers);
       $(".newQuote").on("keypress", addNewQuote);
       $("quote").on("mousedown", removeQuote);
@@ -109,6 +111,36 @@ import '../util/rivets.custom';
     });
 
 
+}
+
+function removeQuote(e) {
+  if(e.button === 2){
+    var quoteid = $(this).attr("quoteid");
+    quotesObj.map((quoteObj, i) => {
+      if(quoteObj.id === quoteid){
+        quotesObj.splice(i,1);
+        updateLocalStorageQuotes();
+        return false;
+      }
+    });
+    return false;
+  }
+}
+function updateLocalStorageQuotes(){
+  var updatedQuotesList = quotesObj.map(quoteObj => quoteObj.text);
+  var updatedQuotesListString = updatedQuotesList.join(quotesStringSeparator);
+  localStorage.setItem("quotes", updatedQuotesListString);
+}
+
+function getQuotesObj(quotes){
+  return (quotes.map((quote, i) => ({
+      id: "" + i,
+      editId: "E"+i,
+      text: quote,
+      editMode: false,
+      rows : Math.round(quote.length / charactersPerLine) + 1
+    })
+  ));
 }
 
 function addNewQuote(e){
@@ -120,10 +152,27 @@ function addNewQuote(e){
       editId: "NE"+newQuoteIndex,
       text: quote,
       editMode: false,
-      rows : Math.round(quote.length / charactersPerLine) + 1
+      rows : Math.round(quote.length / charactersPerLine) + 1,
+      rendered : false
     });
+    quotesObj[0].rendered = true;
     newQuoteIndex = newQuoteIndex + 1;
     $(this).val("");
+    updateLocalStorageQuotes();
+    return false;
+  }
+}
+
+function removeQuote(e) {
+  if(e.button === 2){
+    var quoteid = $(this).attr("quoteid");
+    quotesObj.map((quoteObj, i) => {
+      if(quoteObj.id === quoteid){
+        quotesObj.splice(i,1);
+        updateLocalStorageQuotes();
+        return false;
+      }
+    });
     return false;
   }
 }
@@ -227,19 +276,6 @@ function generateWallpapers() {
     });
 
   });
-}
-
-function removeQuote(e) {
-  if(e.button === 2){
-    var quoteid = $(this).attr("quoteid");
-    quotesObj.map((quoteObj, i) => {
-      if(quoteObj.id === quoteid){
-        quotesObj.splice(i,1);
-        return false;
-      }
-    });
-    return false;
-  }
 }
 
 function turnEditModeOff(e){

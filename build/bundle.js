@@ -18423,16 +18423,10 @@ var characterReplaceMap = {
 
 var quotes = ["There are a lot of ways to neutralise your enemy. Forgiving him is the first of all.", "If you run away from it, grief will chase you. Stand your ground, it will run away from you.", "If you always put limits on everything you do, physical or anything else,. it will spread into your work and into your life. There are no limits. There are only plateaus,. and you must not stay there, you must go beyond them. |Bruce Lee", "Unless you try to do something beyond. what you have already mastered you will never grow", "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma: which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.", "Roads in the mountains teach you a very important lesson in life. what seems like an END is very often just a BEND.", "I hated every minute of training, but I said, Don't Quit. Suffer now and live the rest of your life as champion.", "Have you ever seen books or courses titled. 'Learn Aeronautical Engineering in 21 Days' or 'Bridge Construction for Idiots'?. Of course not, yet good developers will spend just as long learning their craft. The primary difference is that development has a lower barrier to entry, and you're less likely to hurt anyone with shoddy code. … unless your software is used to design aircraft or bridges!. -        Coding is difficult        - . You'll be able to create a few simple programs within days,. but you'll need many months' knowledge to confidently tackle a large application. Most professional jobs require several years of solid experience. Even then, you're always learning.", "We all die, The goal isn't to live forever. the goal is to create something that will.", "We are drowning in information while starving for wisdom.", "Relationships never die a natural death they are always murdered by ego, attitude and ignorance.", "The courage to share your gift with others, is what separates the artist from amateurs"];
 
+var quotesStringSeparator = "]][[";
+
 var newQuoteIndex = 1;
-var quotesObj = quotes.map(function (quote, i) {
-  return {
-    id: "" + i,
-    editId: "E" + i,
-    text: quote,
-    editMode: false,
-    rows: Math.round(quote.length / charactersPerLine) + 1
-  };
-});
+var quotesObj = [];
 
 function walls() {
   "use strict";
@@ -18463,6 +18457,12 @@ function walls() {
   self.$$ = _jquery2["default"]("<div module='walls'></div>");
   _jquery2["default"]("body .content").unbind().off().html(self.$$);
 
+  if (localStorage.getItem("quotes") !== null) {
+    quotes = localStorage.getItem("quotes").split(quotesStringSeparator);
+  }
+  quotesObj = getQuotesObj(quotes);
+  updateLocalStorageQuotes();
+
   fetch('src/modules/walls/walls.html').then(function (template) {
     return template.text();
   }).then(function (templateString) {
@@ -18477,9 +18477,43 @@ function walls() {
         }
       }
     });
+
     _jquery2["default"]("#generate-wallpapers").on("click", generateWallpapers);
     _jquery2["default"](".newQuote").on("keypress", addNewQuote);
     _jquery2["default"]("quote").on("mousedown", removeQuote);
+  });
+}
+
+function removeQuote(e) {
+  if (e.button === 2) {
+    var quoteid = $(this).attr("quoteid");
+    quotesObj.map(function (quoteObj, i) {
+      if (quoteObj.id === quoteid) {
+        quotesObj.splice(i, 1);
+        updateLocalStorageQuotes();
+        return false;
+      }
+    });
+    return false;
+  }
+}
+function updateLocalStorageQuotes() {
+  var updatedQuotesList = quotesObj.map(function (quoteObj) {
+    return quoteObj.text;
+  });
+  var updatedQuotesListString = updatedQuotesList.join(quotesStringSeparator);
+  localStorage.setItem("quotes", updatedQuotesListString);
+}
+
+function getQuotesObj(quotes) {
+  return quotes.map(function (quote, i) {
+    return {
+      id: "" + i,
+      editId: "E" + i,
+      text: quote,
+      editMode: false,
+      rows: Math.round(quote.length / charactersPerLine) + 1
+    };
   });
 }
 
@@ -18494,10 +18528,27 @@ function addNewQuote(e) {
       editId: "NE" + newQuoteIndex,
       text: quote,
       editMode: false,
-      rows: Math.round(quote.length / charactersPerLine) + 1
+      rows: Math.round(quote.length / charactersPerLine) + 1,
+      rendered: false
     });
+    quotesObj[0].rendered = true;
     newQuoteIndex = newQuoteIndex + 1;
     $(this).val("");
+    updateLocalStorageQuotes();
+    return false;
+  }
+}
+
+function removeQuote(e) {
+  if (e.button === 2) {
+    var quoteid = $(this).attr("quoteid");
+    quotesObj.map(function (quoteObj, i) {
+      if (quoteObj.id === quoteid) {
+        quotesObj.splice(i, 1);
+        updateLocalStorageQuotes();
+        return false;
+      }
+    });
     return false;
   }
 }
@@ -18595,19 +18646,6 @@ function generateWallpapers() {
       });
     });
   });
-}
-
-function removeQuote(e) {
-  if (e.button === 2) {
-    var quoteid = $(this).attr("quoteid");
-    quotesObj.map(function (quoteObj, i) {
-      if (quoteObj.id === quoteid) {
-        quotesObj.splice(i, 1);
-        return false;
-      }
-    });
-    return false;
-  }
 }
 
 function turnEditModeOff(e) {

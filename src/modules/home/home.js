@@ -8,5 +8,5 @@ export function home(){
     .unbind().off()
     .html(self.$$);
 
-  self.$$.html('<img class="fadein" src="../../img/Arsenal.png"/>');
+  self.$$.html('<img class="fadein" src="../../src/img/Arsenal.png"/>');
 }

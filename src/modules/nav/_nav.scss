@@ -2,13 +2,11 @@
   .nav-lv2{
     navitem{
       color: #666;
-      font-family: $Roboto;
-      font-weight: 100;
-      font-size: 14px;
-      padding: 9px;
-      margin: 6px 6px 0px 6px;
+      font-size: 18px;
+      margin: -2px 6px 0px 6px;
+      color: #153C53;
       &.active, &:hover{
-        border-bottom: 2px solid $green;
+        color: $green;
       }
     }
   }

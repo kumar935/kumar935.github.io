@@ -104,28 +104,34 @@ import '../util/rivets.custom';
         }
       });
 
-      $("#generate-wallpapers").on("click", generateWallpapers);
-      $(".newQuote").on("keypress", addNewQuote);
-      $("quote").on("mousedown", removeQuote);
+      generateWallpapers();
+      self.$$.find("#generate-wallpapers").on("click", generateWallpapers);
+      self.$$.find(".newQuote").on("keypress", addNewQuote);
+      self.$$.find("quote").on("mousedown", removeQuote);
 
     });
 
 
 }
 
-function removeQuote(e) {
-  if(e.button === 2){
-    var quoteid = $(this).attr("quoteid");
-    quotesObj.map((quoteObj, i) => {
-      if(quoteObj.id === quoteid){
-        quotesObj.splice(i,1);
-        updateLocalStorageQuotes();
-        return false;
-      }
+function generateWallpapers(){
+  $('wallpaper[quoteid]').each(function(){
+    var $this = $(this);
+    $this.html("");
+    var quoteid = $this.attr("quoteid");
+    var selector = "wallpaper[quoteid='"+ quoteid +"']";
+    appendWallPaperTemplate(quoteid, selector).done(function(){
+      quotesObj.map((quoteObj, index) => {
+        if(quoteObj.id === quoteid){
+          generateWallPaper(quotesObj[index].text, {}, "#wallpaper"+quoteid);
+          return false;
+        }
+      });
+//      wallpaperify(quoteid);
     });
-    return false;
-  }
+  });
 }
+
 function updateLocalStorageQuotes(){
   var updatedQuotesList = quotesObj.map(quoteObj => quoteObj.text);
   var updatedQuotesListString = updatedQuotesList.join(quotesStringSeparator);
@@ -147,14 +153,20 @@ function addNewQuote(e){
   if(e.which === 13){
     var quote = $(this).val();
     if(quote === ""){return false;}
+    var quoteid = "N" + newQuoteIndex;
+    var selector = "wallpaper[quoteid='"+ quoteid +"']";
     quotesObj.unshift({
-      id: "N" + newQuoteIndex,
+      id: quoteid,
       editId: "NE"+newQuoteIndex,
       text: quote,
       editMode: false,
       rows : Math.round(quote.length / charactersPerLine) + 1,
       rendered : false
     });
+//    appendWallPaperTemplate(quoteid, selector).done(function(){
+//      generateWallPaper(quote, {}, "#wallpaper"+quoteid);
+//    });
+    generateWallpapers();
     quotesObj[0].rendered = true;
     newQuoteIndex = newQuoteIndex + 1;
     $(this).val("");
@@ -166,10 +178,13 @@ function addNewQuote(e){
 function removeQuote(e) {
   if(e.button === 2){
     var quoteid = $(this).attr("quoteid");
+    //remove wallpaper
     quotesObj.map((quoteObj, i) => {
       if(quoteObj.id === quoteid){
         quotesObj.splice(i,1);
         updateLocalStorageQuotes();
+        $("wallpaper[quoteid='"+ quoteid +"']").remove();
+        generateWallpapers();
         return false;
       }
     });
@@ -177,7 +192,7 @@ function removeQuote(e) {
   }
 }
 
-function appendWallPaperTemplate(index) {
+function appendWallPaperTemplate(index, container) {
   var wallPaperTemplateString = [
       '<div class="background" id="wallpaper' + index + '">',
     '<div class="quoteBox">',
@@ -185,7 +200,7 @@ function appendWallPaperTemplate(index) {
     '</div></div></div>',
       '<div class="downloadBtnContainer"><a class="download gen-btn" id="download' + index + '">Download</a></div>'
   ].join("");
-  $(".walls-generated").append(wallPaperTemplateString);
+  $(container).append(wallPaperTemplateString);
   return $.when();
 }
 
@@ -210,13 +225,14 @@ function removeEmptyElements(array) {
 
 
 function getOriginalWidth(quote) {
-  $("#dummy").find(".quoteContainer").html(quote);
-  var width = $(".quoteContainer").innerWidth();
-  $("#dummy").find(".quoteContainer").html("");
+  var $quoteContainer = $("#dummy").find(".quoteContainer");
+  $quoteContainer.html(quote);
+  var width = $quoteContainer.innerWidth();
+  $quoteContainer.html("");
   return width;
 }
 
-function generateWallPaper(quote, styles, id) {
+function generateWallPaper(quote, styles, selector) {
   //styles = {backgroundType, backgroundNo, backgroundZoom, fontColor}
   var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.REPEAT_DARK,
       backgroundNo = styles && styles.backgroundNo ? styles.backgroundNo : Math.round(Math.random() * (backgroundList.length - 1 )),
@@ -227,9 +243,9 @@ function generateWallPaper(quote, styles, id) {
       quoteParts = removeEmptyElements(quote.split(".")),
       quotePartOccupyWidth = getOriginalWidth(quote),
       quoteTemplate = "",
-      $quoteContainer = $("#wallpaper"+id).find(".quoteContainer");
+      $quoteContainer = $(selector).find(".quoteContainer");
 
-  $("#wallpaper"+id).css({
+  $(selector).css({
     background : 'url(' + background + ') repeat center center',
 //    backgroundSize: backgroundSize ,
     color: fontColor
@@ -255,26 +271,29 @@ function generateWallPaper(quote, styles, id) {
   });
 }
 
-function generateWallpapers() {
-  var self = this;
-  $("#dummy").siblings().remove(); //need dummy to be there
-  var finalQuoteList = quotesObj.map(quoteObj => quoteObj.text);
-  finalQuoteList.map(function (quote, i) {
-    appendWallPaperTemplate(i).done(function () {
-      generateWallPaper(quote, {}, i);
-      html2canvas($("#wallpaper" + i), {
-        onrendered: function (canvas) {
-          document.body.appendChild(canvas);
-          $(canvas).attr("id", "canvas" + i);
-          // Convert and download as image
-          $("#wallpaper" + i).replaceWith(canvas);
-          document.getElementById('download' + i).addEventListener('click', function () {
-            downloadCanvas(this, 'canvas' + i, 'test.png');
-          }, false);
-        }
-      });
-    });
+//function generateWallpapers() {
+//  var self = this;
+//  $("#dummy").siblings().remove(); //need dummy to be there
+//  var finalQuoteList = quotesObj.map(quoteObj => quoteObj.text);
+//  finalQuoteList.map(function (quote, index) {
+//    appendWallPaperTemplate(index, ".walls-generated").done(function () {
+//      generateWallPaper(quote, {}, "#wallpaper"+id);
+//      wallpaperify(index);
+//    });
+//  });
+//}
 
+function wallpaperify(index){
+  html2canvas($("#wallpaper" + index), {
+    onrendered: function (canvas) {
+      document.body.appendChild(canvas);
+      $(canvas).attr("id", "canvas" + index);
+      // Convert and download as image
+      $("#wallpaper" + index).replaceWith(canvas);
+      document.getElementById('download' + index).addEventListener('click', function () {
+        downloadCanvas(this, 'canvas' + index, 'test.png');
+      }, false);
+    }
   });
 }
 
@@ -287,6 +306,7 @@ function turnEditModeOff(e){
           quoteObj.editMode = false;
         }
       });
+      generateWallpapers();
       return false; //to prevent line break in textarea
     }
   };

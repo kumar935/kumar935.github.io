@@ -808,6 +808,14 @@ The `sprites` mixin generates identical output to the CSS template
       line-height: 17px; }
       .walls-controls .walls-quotes-input .quoteAndWallpaper quoteblock quote label {
         cursor: text; }
+    .walls-controls .walls-quotes-input .quoteAndWallpaper quoteblock .customizeMenuContainer {
+      width: 170px;
+      position: absolute;
+      height: 20px;
+      margin: 8px 16px; }
+      .walls-controls .walls-quotes-input .quoteAndWallpaper quoteblock .customizeMenuContainer .customizeMenu {
+        display: flex;
+        flex-direction: row; }
 
 .walls-generated .background, wallpaper .background {
   background-color: #eee;

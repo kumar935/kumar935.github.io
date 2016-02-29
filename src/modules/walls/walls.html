@@ -1,7 +1,6 @@
 <div class="walls W(1/1)">
     <div class="walls-controls D(f) Jc(c) Py(16px) Fld(c)">
         <div class="walls-buttons D(f) Fld(c) Ai(c) Py(16px)">
-            <button id="generate-wallpapers">Generate Wallpapers</button>
             <textarea class="newQuote W(3/10)"/>
         </div>
         <div class="walls-quotes-input D(f) Fld(c) Ai(c)">
@@ -14,6 +13,25 @@
                         </label>
                     </quote>
                     <input type="checkbox" rv-quoteid="quote.id" rv-checked="quote.editMode" rv-id="quote.editId" class="D(n)" rv-on-change="model.actions.focusTextArea">
+                    <div class="customizeMenuContainer">
+                        <div class="customizeMenu">
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
                 </quoteblock>
                 <wallpaper rv-quoteid="quote.id">
                 </wallpaper>

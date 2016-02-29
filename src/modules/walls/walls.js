@@ -25,6 +25,8 @@ var repeatDark = [
   "../../src/img/background/dark/footer_lodyas.png"
 ];
 
+//bruh use these amazing gradients as background from here: https://descartes.io/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning 
+
 var defaultMaxWidthBeforeLineBreak = 850;
 // 91 'd's covered 602px
 var charactersPerLine = 91;

@@ -25,7 +25,9 @@ var repeatDark = [
   "../../src/img/background/dark/footer_lodyas.png"
 ];
 
-//bruh use these amazing gradients as background from here: https://descartes.io/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning 
+var fonts = ["Lato", "Dawn", "Pacifico", "Poirot", "Yanone", "Bree", "Righteous", "Satisfy", "Roboto"];
+
+//bruh use these amazing gradients as background from here: https://descartes.io/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning
 
 var defaultMaxWidthBeforeLineBreak = 850;
 // 91 'd's covered 602px
@@ -87,7 +89,12 @@ import '../util/rivets.custom';
   if(localStorage.getItem("quotes") !== null){
     quotes = localStorage.getItem("quotes").split(quotesStringSeparator);
   }
-  quotesObj = getQuotesObj(quotes);
+  if(localStorage.getItem("quoteObj") !== null){
+    var prevQuoteObj = JSON.parse(localStorage.getItem("quoteObj"));
+    quotesObj = prevQuoteObj;
+  } else {
+    quotesObj = getQuotesObj(quotes);
+  }
   updateLocalStorageQuotes();
 
   fetch('src/modules/walls/walls.html')
@@ -102,7 +109,13 @@ import '../util/rivets.custom';
           actions: {
             editModeOff: turnEditModeOff(),
             focusTextArea: focusTextArea()
-          }
+          },
+          walls: {
+            all: images.REPEAT_LIGHT.concat(images.REPEAT_DARK).map(function(image, index){
+              return index;
+            })
+          },
+          fonts: fonts
         }
       });
 
@@ -119,25 +132,38 @@ import '../util/rivets.custom';
 function generateWallpapers(){
   $('wallpaper[quoteid]').each(function(){
     var $this = $(this);
+    var styles = {};
     $this.html("");
     var quoteid = $this.attr("quoteid");
     var selector = "wallpaper[quoteid='"+ quoteid +"']";
     appendWallPaperTemplate(quoteid, selector).done(function(){
       quotesObj.map((quoteObj, index) => {
         if(quoteObj.id === quoteid){
-          generateWallPaper(quotesObj[index].text, {}, "#wallpaper"+quoteid);
+          styles = quoteObj.styles ? quoteObj.styles : {};
+          generateWallPaper(quotesObj[index].text, styles, "#wallpaper"+quoteid);
           return false;
         }
       });
 //      wallpaperify(quoteid);
     });
   });
+  $(".chooseBackground")
+    .unbind()
+    .on("change", changeBackground);
+  $(".chooseFont")
+    .unbind()
+    .on("change", changeFont);
+  $(".chooseFontColor")
+    .unbind()
+    .on("change", changeFontColor);
 }
 
 function updateLocalStorageQuotes(){
   var updatedQuotesList = quotesObj.map(quoteObj => quoteObj.text);
   var updatedQuotesListString = updatedQuotesList.join(quotesStringSeparator);
   localStorage.setItem("quotes", updatedQuotesListString);
+  localStorage.setItem("quoteObj", JSON.stringify(quotesObj));
+  console.log("The quotesObj: ", quotesObj);
 }
 
 function getQuotesObj(quotes){
@@ -146,7 +172,12 @@ function getQuotesObj(quotes){
       editId: "E"+i,
       text: quote,
       editMode: false,
-      rows : Math.round(quote.length / charactersPerLine) + 1
+      rows : Math.round(quote.length / charactersPerLine) + 1,
+      styles: {
+        background: "",
+        font: "",
+        fontColor: ""
+      }
     })
   ));
 }
@@ -163,7 +194,12 @@ function addNewQuote(e){
       text: quote,
       editMode: false,
       rows : Math.round(quote.length / charactersPerLine) + 1,
-      rendered : false
+      rendered : false,
+      styles: {
+        background: "",
+        font: "",
+        fontColor: ""
+      }
     });
 //    appendWallPaperTemplate(quoteid, selector).done(function(){
 //      generateWallPaper(quote, {}, "#wallpaper"+quoteid);
@@ -235,11 +271,12 @@ function getOriginalWidth(quote) {
 }
 
 function generateWallPaper(quote, styles, selector) {
-  //styles = {backgroundType, backgroundNo, backgroundZoom, fontColor}
-  var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.REPEAT_DARK,
-      backgroundNo = styles && styles.backgroundNo ? styles.backgroundNo : Math.round(Math.random() * (backgroundList.length - 1 )),
+  //styles = {backgroundType, backgroundNo, backgroundZoom, fontColor, font}
+  var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.REPEAT_LIGHT.concat(images.REPEAT_DARK),
+      backgroundNo = styles && styles.background ? styles.background : Math.round(Math.random() * (backgroundList.length - 1 )),
       background = backgroundList[backgroundNo],
-      backgroundSize = styles && styles.backgroundZoom ? (styles.backgroundZoom + '%') : '150%',
+      backgroundSize = styles && styles.backgroundZoom ? (styles.backgroundZoom + '%') : '100%',
+      font = styles && styles.font ? styles.font : "",
       fontColor = styles && styles.fontColor ? styles.fontColor : '#ffffff',
       maxWidthBeforeLineBreak = styles && styles.maxWidthBeforeLineBreak ? styles.maxWidthBeforeLineBreak : defaultMaxWidthBeforeLineBreak,
       quoteParts = removeEmptyElements(quote.split(".")),
@@ -265,12 +302,17 @@ function generateWallPaper(quote, styles, selector) {
       }
     });
   }
+
   $quoteContainer.html(quoteTemplate);
   $quoteContainer.find(".line").each(function () {
     var width = $(this).innerWidth();
     var reqPercentWidth = (maxWidthBeforeLineBreak / width) * 100;
     $(this).not(".quoteBy").css("font-size", reqPercentWidth + "%");
   });
+
+  $quoteContainer
+    .removeClass()
+    .addClass("quoteContainer " + font);
 }
 
 //function generateWallpapers() {
@@ -319,4 +361,41 @@ function focusTextArea(e){
     //this function only seems to get fired when input is checked, not when unchecked
     $(this).siblings("textarea").focus();
   };
+}
+
+function changeBackground(){
+  var newBg = $(this).val();
+  var quoteid = $(this).closest(".customizeMenuContainer").attr("quoteid");
+  quotesObj.map(function(quoteObj){
+    if(quoteObj.id === quoteid){
+      quoteObj.styles.background = newBg;
+    }
+  });
+  updateLocalStorageQuotes();
+  generateWallpapers();
+}
+
+function changeFont(){
+  var newFont = $(this).val();
+  var quoteid = $(this).closest(".customizeMenuContainer").attr("quoteid");
+  quotesObj.map(function(quoteObj){
+    if(quoteObj.id === quoteid){
+      quoteObj.styles.font = newFont;
+    }
+  });
+  updateLocalStorageQuotes();
+  generateWallpapers();
+}
+
+
+function changeFontColor(){
+  var newFontColor = $(this).val();
+  var quoteid = $(this).closest(".customizeMenuContainer").attr("quoteid");
+  quotesObj.map(function(quoteObj){
+    if(quoteObj.id === quoteid){
+      quoteObj.styles.fontColor = newFontColor;
+    }
+  });
+  updateLocalStorageQuotes();
+  generateWallpapers();
 }

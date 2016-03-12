@@ -20,15 +20,8 @@
           width: 100%;
           margin-bottom: 18px;
           border: 1px solid transparent;
-          border-radius: 4px;
           font-family: $Lato;
-          font-family: $Dawn;
-          font-family: $Pacifico;
-          font-family: $Poirot;
-          font-family: $Yanone;
-          font-family: $Bree;
-          font-family: $Righteous;
-          font-family: $Satisfy;
+          border-radius: 4px;
           font-style: italic;
           font-weight: 300;
           font-size: 12.9px;
@@ -68,21 +61,40 @@
     }
 
     .quoteContainer, .dummy{
-      font-family: $Amatic;
       font-size: 36px;
+      font-family: $Lato;
+      &.Lato{
+        font-family: $Lato;
+      }
+      &.Dawn{
+        font-family: $Dawn;
+      }
+      &.Pacifico{
+        font-family: $Pacifico;
+      }
+      &.Poirot{
+        font-family: $Poirot;
+      }
+      &.Yanone{
+        font-family: $Yanone;
+      }
+      &.Bree{
+        font-family: $Bree;
+      }
+      &.Righteous{
+        font-family: $Righteous;
+      }
+      &.Satisfy{
+        font-family: $Satisfy;
+      }
+      &.Roboto{
+        font-family: $Roboto;
+      }
     }
 
     .line{
       display: inline-block;
       white-space: nowrap;
-      font-family: $Lato;
-      font-family: $Dawn;
-      font-family: $Pacifico;
-      font-family: $Poirot;
-      font-family: $Yanone;
-      font-family: $Bree;
-      font-family: $Righteous;
-      font-family: $Satisfy;
     }
 
     .quoteBy{

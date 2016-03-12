@@ -18406,6 +18406,10 @@ var repeatLight = ["data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My
 var darkImages = ["data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgogIAk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjZmZmJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMCknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoOSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMy41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDE4KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDIyLjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjcpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMzEuNSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgzNiknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0MC41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDQ1KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDQ5LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNTQpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNTguNSknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg2MyknLz4KICAgIDxyZWN0IHdpZHRoPSc1MDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjE1JyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg2Ny41KScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDcyKScvPgogICAgPHJlY3Qgd2lkdGg9JzUwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMTUnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDc2LjUpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoODEpJy8+CiAgICA8cmVjdCB3aWR0aD0nNTAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xNScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoODUuNSknLz4KICA8L3N2Zz4=", "data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgogICAgPHJlY3Qgd2lkdGg9JzEwMDAlJyBoZWlnaHQ9JzEwMDAlJyBmaWxsPScjZmZmJy8+CiAgICA8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPScjODA0MTA3Jy8+CiAgICA8c3ZnIHg9JzUwJScgeT0nNTAlJyBvdmVyZmxvdz0ndmlzaWJsZSc+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDIwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSg0MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoNjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDgwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMDApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDEyMCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMTQwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxNjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjAwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgyMjApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDI0MCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMjYwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgyODApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDMwMCknLz4KICAgICAgPHJlY3Qgd2lkdGg9JzIwMDAlJyBoZWlnaHQ9JzIwMDAlJyBmaWxsLW9wYWNpdHk9JzAuMScgZmlsbD0nIzAwMCcgdHJhbnNmb3JtPSdyb3RhdGUoMzIwKScvPgogICAgICA8cmVjdCB3aWR0aD0nMjAwMCUnIGhlaWdodD0nMjAwMCUnIGZpbGwtb3BhY2l0eT0nMC4xJyBmaWxsPScjMDAwJyB0cmFuc2Zvcm09J3JvdGF0ZSgzNDApJy8+CiAgICAgIDxyZWN0IHdpZHRoPScyMDAwJScgaGVpZ2h0PScyMDAwJScgZmlsbC1vcGFjaXR5PScwLjEnIGZpbGw9JyMwMDAnIHRyYW5zZm9ybT0ncm90YXRlKDM2MCknLz4KCiAgICA8L3N2Zz4KICA8L3N2Zz4="];
 var repeatDark = ["../../src/img/background/dark/congruent_outline.png", "../../src/img/background/dark/footer_lodyas.png"];
 
+var fonts = ["Lato", "Dawn", "Pacifico", "Poirot", "Yanone", "Bree", "Righteous", "Satisfy", "Roboto"];
+
+//bruh use these amazing gradients as background from here: https://descartes.io/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning
+
 var defaultMaxWidthBeforeLineBreak = 850;
 // 91 'd's covered 602px
 var charactersPerLine = 91;
@@ -18463,7 +18467,12 @@ function walls() {
   if (localStorage.getItem("quotes") !== null) {
     quotes = localStorage.getItem("quotes").split(quotesStringSeparator);
   }
-  quotesObj = getQuotesObj(quotes);
+  if (localStorage.getItem("quoteObj") !== null) {
+    var prevQuoteObj = JSON.parse(localStorage.getItem("quoteObj"));
+    quotesObj = prevQuoteObj;
+  } else {
+    quotesObj = getQuotesObj(quotes);
+  }
   updateLocalStorageQuotes();
 
   fetch('src/modules/walls/walls.html').then(function (template) {
@@ -18477,7 +18486,13 @@ function walls() {
         actions: {
           editModeOff: turnEditModeOff(),
           focusTextArea: focusTextArea()
-        }
+        },
+        walls: {
+          all: images.REPEAT_LIGHT.concat(images.REPEAT_DARK).map(function (image, index) {
+            return index;
+          })
+        },
+        fonts: fonts
       }
     });
 
@@ -18491,19 +18506,24 @@ function walls() {
 function generateWallpapers() {
   $('wallpaper[quoteid]').each(function () {
     var $this = $(this);
+    var styles = {};
     $this.html("");
     var quoteid = $this.attr("quoteid");
     var selector = "wallpaper[quoteid='" + quoteid + "']";
     appendWallPaperTemplate(quoteid, selector).done(function () {
       quotesObj.map(function (quoteObj, index) {
         if (quoteObj.id === quoteid) {
-          generateWallPaper(quotesObj[index].text, {}, "#wallpaper" + quoteid);
+          styles = quoteObj.styles ? quoteObj.styles : {};
+          generateWallPaper(quotesObj[index].text, styles, "#wallpaper" + quoteid);
           return false;
         }
       });
       //      wallpaperify(quoteid);
     });
   });
+  $(".chooseBackground").unbind().on("change", changeBackground);
+  $(".chooseFont").unbind().on("change", changeFont);
+  $(".chooseFontColor").unbind().on("change", changeFontColor);
 }
 
 function updateLocalStorageQuotes() {
@@ -18512,6 +18532,8 @@ function updateLocalStorageQuotes() {
   });
   var updatedQuotesListString = updatedQuotesList.join(quotesStringSeparator);
   localStorage.setItem("quotes", updatedQuotesListString);
+  localStorage.setItem("quoteObj", JSON.stringify(quotesObj));
+  console.log("The quotesObj: ", quotesObj);
 }
 
 function getQuotesObj(quotes) {
@@ -18521,7 +18543,12 @@ function getQuotesObj(quotes) {
       editId: "E" + i,
       text: quote,
       editMode: false,
-      rows: Math.round(quote.length / charactersPerLine) + 1
+      rows: Math.round(quote.length / charactersPerLine) + 1,
+      styles: {
+        background: "",
+        font: "",
+        fontColor: ""
+      }
     };
   });
 }
@@ -18540,7 +18567,12 @@ function addNewQuote(e) {
       text: quote,
       editMode: false,
       rows: Math.round(quote.length / charactersPerLine) + 1,
-      rendered: false
+      rendered: false,
+      styles: {
+        background: "",
+        font: "",
+        fontColor: ""
+      }
     });
     //    appendWallPaperTemplate(quoteid, selector).done(function(){
     //      generateWallPaper(quote, {}, "#wallpaper"+quoteid);
@@ -18605,11 +18637,12 @@ function getOriginalWidth(quote) {
 }
 
 function generateWallPaper(quote, styles, selector) {
-  //styles = {backgroundType, backgroundNo, backgroundZoom, fontColor}
-  var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.REPEAT_DARK,
-      backgroundNo = styles && styles.backgroundNo ? styles.backgroundNo : Math.round(Math.random() * (backgroundList.length - 1)),
+  //styles = {backgroundType, backgroundNo, backgroundZoom, fontColor, font}
+  var backgroundList = styles && styles.backgroundType ? images[styles.backgroundType] : images.REPEAT_LIGHT.concat(images.REPEAT_DARK),
+      backgroundNo = styles && styles.background ? styles.background : Math.round(Math.random() * (backgroundList.length - 1)),
       background = backgroundList[backgroundNo],
-      backgroundSize = styles && styles.backgroundZoom ? styles.backgroundZoom + '%' : '150%',
+      backgroundSize = styles && styles.backgroundZoom ? styles.backgroundZoom + '%' : '100%',
+      font = styles && styles.font ? styles.font : "",
       fontColor = styles && styles.fontColor ? styles.fontColor : '#ffffff',
       maxWidthBeforeLineBreak = styles && styles.maxWidthBeforeLineBreak ? styles.maxWidthBeforeLineBreak : defaultMaxWidthBeforeLineBreak,
       quoteParts = removeEmptyElements(quote.split(".")),
@@ -18635,12 +18668,15 @@ function generateWallPaper(quote, styles, selector) {
       }
     });
   }
+
   $quoteContainer.html(quoteTemplate);
   $quoteContainer.find(".line").each(function () {
     var width = $(this).innerWidth();
     var reqPercentWidth = maxWidthBeforeLineBreak / width * 100;
     $(this).not(".quoteBy").css("font-size", reqPercentWidth + "%");
   });
+
+  $quoteContainer.removeClass().addClass("quoteContainer " + font);
 }
 
 //function generateWallpapers() {
@@ -18689,6 +18725,42 @@ function focusTextArea(e) {
     //this function only seems to get fired when input is checked, not when unchecked
     $(this).siblings("textarea").focus();
   };
+}
+
+function changeBackground() {
+  var newBg = $(this).val();
+  var quoteid = $(this).closest(".customizeMenuContainer").attr("quoteid");
+  quotesObj.map(function (quoteObj) {
+    if (quoteObj.id === quoteid) {
+      quoteObj.styles.background = newBg;
+    }
+  });
+  updateLocalStorageQuotes();
+  generateWallpapers();
+}
+
+function changeFont() {
+  var newFont = $(this).val();
+  var quoteid = $(this).closest(".customizeMenuContainer").attr("quoteid");
+  quotesObj.map(function (quoteObj) {
+    if (quoteObj.id === quoteid) {
+      quoteObj.styles.font = newFont;
+    }
+  });
+  updateLocalStorageQuotes();
+  generateWallpapers();
+}
+
+function changeFontColor() {
+  var newFontColor = $(this).val();
+  var quoteid = $(this).closest(".customizeMenuContainer").attr("quoteid");
+  quotesObj.map(function (quoteObj) {
+    if (quoteObj.id === quoteid) {
+      quoteObj.styles.fontColor = newFontColor;
+    }
+  });
+  updateLocalStorageQuotes();
+  generateWallpapers();
 }
 
 },{"../../external/html2canvas/build/html2canvas.min":198,"../util/rivets.custom":202,"jquery":192,"rivets":194,"underscore":196}]},{},[197]);

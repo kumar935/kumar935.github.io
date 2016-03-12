@@ -792,15 +792,8 @@ The `sprites` mixin generates identical output to the CSS template
       width: 100%;
       margin-bottom: 18px;
       border: 1px solid transparent;
-      border-radius: 4px;
       font-family: "Lato", sans-serif;
-      font-family: "Dawning of a New Day", cursive;
-      font-family: "Pacifico", cursive;
-      font-family: "Poiret One", cursive;
-      font-family: "Yanone Kaffeesatz", sans-serif;
-      font-family: "Bree Serif", serif;
-      font-family: "Righteous", cursive;
-      font-family: "Satisfy", cursive;
+      border-radius: 4px;
       font-style: italic;
       font-weight: 300;
       font-size: 12.9px;
@@ -828,19 +821,29 @@ The `sprites` mixin generates identical output to the CSS template
     /* background: rgba(255,255,255, 0.2); */
     margin: 0 auto; }
   .walls-generated .background .quoteContainer, .walls-generated .background .dummy, wallpaper .background .quoteContainer, wallpaper .background .dummy {
-    font-family: "Amatic SC", cursive;
-    font-size: 36px; }
+    font-size: 36px;
+    font-family: "Lato", sans-serif; }
+    .walls-generated .background .quoteContainer.Lato, .walls-generated .background .dummy.Lato, wallpaper .background .quoteContainer.Lato, wallpaper .background .dummy.Lato {
+      font-family: "Lato", sans-serif; }
+    .walls-generated .background .quoteContainer.Dawn, .walls-generated .background .dummy.Dawn, wallpaper .background .quoteContainer.Dawn, wallpaper .background .dummy.Dawn {
+      font-family: "Dawning of a New Day", cursive; }
+    .walls-generated .background .quoteContainer.Pacifico, .walls-generated .background .dummy.Pacifico, wallpaper .background .quoteContainer.Pacifico, wallpaper .background .dummy.Pacifico {
+      font-family: "Pacifico", cursive; }
+    .walls-generated .background .quoteContainer.Poirot, .walls-generated .background .dummy.Poirot, wallpaper .background .quoteContainer.Poirot, wallpaper .background .dummy.Poirot {
+      font-family: "Poiret One", cursive; }
+    .walls-generated .background .quoteContainer.Yanone, .walls-generated .background .dummy.Yanone, wallpaper .background .quoteContainer.Yanone, wallpaper .background .dummy.Yanone {
+      font-family: "Yanone Kaffeesatz", sans-serif; }
+    .walls-generated .background .quoteContainer.Bree, .walls-generated .background .dummy.Bree, wallpaper .background .quoteContainer.Bree, wallpaper .background .dummy.Bree {
+      font-family: "Bree Serif", serif; }
+    .walls-generated .background .quoteContainer.Righteous, .walls-generated .background .dummy.Righteous, wallpaper .background .quoteContainer.Righteous, wallpaper .background .dummy.Righteous {
+      font-family: "Righteous", cursive; }
+    .walls-generated .background .quoteContainer.Satisfy, .walls-generated .background .dummy.Satisfy, wallpaper .background .quoteContainer.Satisfy, wallpaper .background .dummy.Satisfy {
+      font-family: "Satisfy", cursive; }
+    .walls-generated .background .quoteContainer.Roboto, .walls-generated .background .dummy.Roboto, wallpaper .background .quoteContainer.Roboto, wallpaper .background .dummy.Roboto {
+      font-family: "Roboto Slab"; }
   .walls-generated .background .line, wallpaper .background .line {
     display: inline-block;
-    white-space: nowrap;
-    font-family: "Lato", sans-serif;
-    font-family: "Dawning of a New Day", cursive;
-    font-family: "Pacifico", cursive;
-    font-family: "Poiret One", cursive;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    font-family: "Bree Serif", serif;
-    font-family: "Righteous", cursive;
-    font-family: "Satisfy", cursive; }
+    white-space: nowrap; }
   .walls-generated .background .quoteBy, wallpaper .background .quoteBy {
     font-size: 36px !important;
     width: 100%;

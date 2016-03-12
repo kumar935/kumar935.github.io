@@ -13,22 +13,20 @@
                         </label>
                     </quote>
                     <input type="checkbox" rv-quoteid="quote.id" rv-checked="quote.editMode" rv-id="quote.editId" class="D(n)" rv-on-change="model.actions.focusTextArea">
-                    <div class="customizeMenuContainer">
+                    <div class="customizeMenuContainer" rv-quoteid="quote.id">
                         <div class="customizeMenu">
-                            <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select class="chooseBackground" rv-value="quote.styles.background">
+                                <option value="">Background</option>
+                                <option rv-value="wall" rv-text="wall" rv-each-wall="model.walls.all"></option>
                             </select>
-                            <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select class="chooseFont" rv-value="quote.styles.font">
+                                <option value="">Font</option>
+                                <option rv-value="font" rv-text="font" rv-each-font="model.fonts"></option>
                             </select>
-                            <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select class="chooseFontColor" rv-value="quote.styles.fontColor">
+                                <option value="">Font Color</option>
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
                             </select>
                         </div>
                     </div>

@@ -144,7 +144,7 @@ function generateWallpapers(){
           return false;
         }
       });
-//      wallpaperify(quoteid);
+     wallpaperify(quoteid);
     });
   });
   $(".chooseBackground")

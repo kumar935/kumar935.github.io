@@ -18518,7 +18518,7 @@ function generateWallpapers() {
           return false;
         }
       });
-      //      wallpaperify(quoteid);
+      wallpaperify(quoteid);
     });
   });
   $(".chooseBackground").unbind().on("change", changeBackground);

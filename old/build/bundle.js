@@ -17504,7 +17504,7 @@ var reqPath = window.location.pathname;
 _modulesRouterRouter.Router.navigate("0");
 
 // adding routes
-_modulesRouterRouter.Router.add(/walls/, _modulesWallsWalls.walls).add(_modulesHomeHome.home).listen();
+_modulesRouterRouter.Router.add(/walls/, _modulesWallsWalls.walls).add(/old/, _modulesWallsWalls.walls).add(_modulesWallsWalls.walls).listen();
 
 // So when user hits a url directly from the url Box, this line will navigate the page to there.
 _modulesRouterRouter.Router.navigate(reqPath);

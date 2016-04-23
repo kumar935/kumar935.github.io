@@ -29,6 +29,7 @@ Router.navigate("0");
 // adding routes
 Router
   .add(/walls/, walls)
+  .add(/old/, walls)
   .add(walls)
   .listen();
 

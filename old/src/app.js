@@ -29,7 +29,7 @@ Router.navigate("0");
 // adding routes
 Router
   .add(/walls/, walls)
-  .add(home)
+  .add(walls)
   .listen();
 
 // So when user hits a url directly from the url Box, this line will navigate the page to there.

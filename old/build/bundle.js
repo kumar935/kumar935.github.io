@@ -18475,7 +18475,7 @@ function walls() {
   }
   updateLocalStorageQuotes();
 
-  fetch('src/modules/walls/walls.html').then(function (template) {
+  fetch('old/src/modules/walls/walls.html').then(function (template) {
     return template.text();
   }).then(function (templateString) {
     return self.$$.html(_underscore2["default"].template(templateString)({}));

@@ -97,7 +97,7 @@ import '../util/rivets.custom';
   }
   updateLocalStorageQuotes();
 
-  fetch('src/modules/walls/walls.html')
+  fetch('old/src/modules/walls/walls.html')
     .then(template => template.text())
     .then(templateString =>
       self.$$

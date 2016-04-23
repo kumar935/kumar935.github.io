@@ -1,0 +1,146 @@
+//@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic);
+//@import url(https://fonts.googleapis.com/css?family=Lato:100,300,100italic,300italic);
+//@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,100italic,300italic,400italic);
+//@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+//@import url(https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day);
+//@import url(https://fonts.googleapis.com/css?family=Pacifico);
+//@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+//@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700,300);
+//@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+//@import url(https://fonts.googleapis.com/css?family=Righteous);
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Satisfy-Regular.ttf);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../fonts/RobotoSlab-Thin.ttf);
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/RobotoSlab-Light.ttf);
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/RobotoSlab-Regular.ttf);
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/RobotoSlab-Bold.ttf);
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+
+$violet: #8C55E4;
+$green: #4DC3A8;
+$orange: #FF9635;
+
+$Lucida: "Lucida Sans Unicode", "Lucida Grande", serif;
+$Roboto: 'Roboto Slab';
+$OpenSans: 'Open Sans', sans-serif;
+$Lato: 'Lato', sans-serif;
+$Josefin: 'Josefin Sans', sans-serif;
+$Amatic: 'Amatic SC', cursive;
+$Dawn: 'Dawning of a New Day', cursive;
+$Pacifico: 'Pacifico', cursive;
+$Poirot: 'Poiret One', cursive;
+$Yanone: 'Yanone Kaffeesatz', sans-serif;
+$Bree: 'Bree Serif', serif;
+$Righteous: 'Righteous', cursive;
+$Satisfy: 'Satisfy', cursive;
+
+[route]{
+  cursor: pointer;
+}
+
+[module]{
+  width: 100%;
+}
+
+input:focus, button:focus, textarea:focus{
+  outline: none;
+}
+
+button, .gen-btn{
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background: transparent;
+  font-family: $Roboto;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+  &:hover{
+    background: $green;
+    color: white;
+    border: 1px solid transparent;
+  }
+}
+
+textarea{
+  margin-bottom: 18px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: $Lato;
+  font-style: italic;
+  font-weight: 300;
+  padding: 5px 0px;
+  font-size: 12.9px;
+  color: #888;
+  line-height: 17px;
+}
+::-webkit-resizer{
+  display: none;
+}
+
+//transitions
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadein {
+  -webkit-animation: fadeIn 0.2s;
+  animation: fadeIn 0.2s;
+}
+
+@-webkit-keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fadeout {
+  -webkit-animation: fadeOut 0.2s;
+  animation: fadeOut 0.2s;
+}
+
